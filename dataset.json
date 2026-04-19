@@ -1,523 +1,43 @@
 [
   {
-    "type": "distractor",
-    "num_transfers": 4,
-    "num_location_distractors": 2,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
     "num_random_distractors": 0,
-    "story": "Kaviya puts the mug on the backpack. Nithin places the mug on the drawer. Yamha places the mug on the desk. Puneet puts the mug on the counter. Shreya puts the mug on the shelf. Ali's favorite spot is the backpack. Arshika's favorite spot is the backpack. Where is the mug?",
-    "object": "mug",
+    "story": "Diya puts the book on the shelf. Where is the book?",
+    "object": "book",
     "answer": "shelf",
     "id": 0
   },
   {
-    "type": "red_herring",
-    "num_transfers": 4,
-    "num_location_distractors": 1,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
     "num_random_distractors": 0,
-    "story": "Diya moves the mug to the backpack. Shrujal moves the mug to the counter. Lipika puts the mug on the drawer. Manasvini places the mug on the table. Puneet moves the mug to the shelf. Arshika moves the pen to the backpack. Where is the mug?",
+    "story": "Ali places the mug on the table. Where is the mug?",
     "object": "mug",
-    "answer": "shelf",
+    "answer": "table",
     "id": 1
   },
   {
-    "type": "distractor",
-    "num_transfers": 1,
-    "num_location_distractors": 3,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
     "num_random_distractors": 0,
-    "story": "Shrimayi moves the book to the drawer. Yamha moves the book to the shelf. Nithin's favorite spot is the drawer. Soha's favorite spot is the drawer. Ali's favorite spot is the drawer. Where is the book?",
-    "object": "book",
-    "answer": "shelf",
+    "story": "Nithin puts the key on the counter. Where is the key?",
+    "object": "key",
+    "answer": "counter",
     "id": 2
   },
   {
-    "type": "distractor",
+    "type": "control",
     "num_transfers": 0,
-    "num_location_distractors": 3,
+    "num_location_distractors": 0,
     "num_random_distractors": 0,
-    "story": "Soha moves the key to the counter. Nithin's favorite spot is the counter. Shrujal's favorite spot is the counter. Manasvini's favorite spot is the counter. Where is the key?",
-    "object": "key",
-    "answer": "counter",
+    "story": "Kaviya moves the pen to the table. Where is the pen?",
+    "object": "pen",
+    "answer": "table",
     "id": 3
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 4,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Nithin moves the pen to the shelf. Soha moves the pen to the desk. Lipika moves the pen to the counter. Kaviya moves the pen to the drawer. Shreya moves the pen to the backpack. Shrujal's favorite spot is the shelf. Arshika's favorite spot is the counter. Where is the pen?",
-    "object": "pen",
-    "answer": "backpack",
-    "id": 4
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 1,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Shrimayi puts the notebook on the counter. Manasvini puts the notebook on the backpack. Diya's favorite spot is the counter. Puneet's favorite spot is the counter. Where is the notebook?",
-    "object": "notebook",
-    "answer": "backpack",
-    "id": 5
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 3,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Arshika puts the key on the drawer. Shreya puts the key on the desk. Manasvini places the key on the counter. Kaviya puts the key on the backpack. Shreya's favorite spot is the drawer. Manasvini's favorite spot is the drawer. Yamha's favorite spot is the drawer. Where is the key?",
-    "object": "key",
-    "answer": "backpack",
-    "id": 6
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 2,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Nithin puts the book on the counter. Soha moves the book to the table. Shrujal puts the book on the desk. Shrujal's favorite spot is the counter. Manasvini's favorite spot is the counter. Where is the book?",
-    "object": "book",
-    "answer": "desk",
-    "id": 7
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 1,
-    "num_location_distractors": 1,
-    "num_random_distractors": 1,
-    "story": "Soha places the mug on the desk. Shreya places the mug on the backpack. Nithin moves the notebook to the desk. Manasvini is a chill guy. Where is the mug?",
-    "object": "mug",
-    "answer": "backpack",
-    "id": 8
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 1,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Manasvini puts the pen on the backpack. Diya moves the pen to the desk. Manasvini's favorite spot is the backpack. Diya's favorite spot is the backpack. Where is the pen?",
-    "object": "pen",
-    "answer": "desk",
-    "id": 9
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 0,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Lipika puts the pen on the counter. Arshika's favorite spot is the counter. Diya's favorite spot is the counter. Shrujal's favorite spot is the counter. Where is the pen?",
-    "object": "pen",
-    "answer": "counter",
-    "id": 10
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 4,
-    "num_location_distractors": 1,
-    "num_random_distractors": 2,
-    "story": "Manasvini places the mug on the shelf. Yamha moves the mug to the desk. Arshika moves the mug to the backpack. Puneet places the mug on the drawer. Kaviya moves the mug to the counter. Shrimayi moves the key to the shelf. Arshika is wearing a black shirt. Manasvini was thinking about dinner. Where is the mug?",
-    "object": "mug",
-    "answer": "counter",
-    "id": 11
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 2,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Shreya puts the key on the table. Diya puts the key on the backpack. Shrimayi places the key on the desk. Yamha's favorite spot is the table. Manasvini's favorite spot is the table. Where is the key?",
-    "object": "key",
-    "answer": "desk",
-    "id": 12
-  },
-  {
-    "type": "control",
-    "num_transfers": 0,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Kaviya moves the pen to the drawer. Where is the pen?",
-    "object": "pen",
-    "answer": "drawer",
-    "id": 13
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 1,
-    "num_location_distractors": 1,
-    "num_random_distractors": 1,
-    "story": "Manasvini puts the pen on the counter. Shrujal puts the pen on the table. Shrimayi puts the notebook on the counter. Lipika is a chill guy. Where is the pen?",
-    "object": "pen",
-    "answer": "table",
-    "id": 14
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 1,
-    "num_location_distractors": 1,
-    "num_random_distractors": 2,
-    "story": "Shreya puts the key on the table. Shrujal places the key on the shelf. Diya puts the notebook on the table. Diya is a chill guy. Shreya is wearing a black shirt. Where is the key?",
-    "object": "key",
-    "answer": "shelf",
-    "id": 15
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 1,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Yamha puts the key on the counter. Nithin puts the key on the shelf. Soha's favorite spot is the counter. Shreya's favorite spot is the counter. Where is the key?",
-    "object": "key",
-    "answer": "shelf",
-    "id": 16
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 2,
-    "num_location_distractors": 1,
-    "num_random_distractors": 1,
-    "story": "Arshika moves the book to the shelf. Manasvini moves the book to the desk. Puneet puts the book on the drawer. Shrimayi moves the mug to the shelf. Arshika enjoys coffee in the morning. Where is the book?",
-    "object": "book",
-    "answer": "drawer",
-    "id": 17
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
-    "num_random_distractors": 2,
-    "story": "Puneet places the mug on the desk. Shrimayi moves the mug to the table. Kaviya puts the mug on the drawer. Shrujal moves the mug to the shelf. Soha puts the pen on the table. Lipika likes reading. Nithin enjoys coffee in the morning. Where is the mug?",
-    "object": "mug",
-    "answer": "shelf",
-    "id": 18
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 2,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Soha moves the notebook to the backpack. Yamha puts the notebook on the drawer. Manasvini moves the notebook to the table. Kaviya puts the mug on the backpack. Where is the notebook?",
-    "object": "notebook",
-    "answer": "table",
-    "id": 19
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 0,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Puneet places the book on the backpack. Arshika's favorite spot is the backpack. Where is the book?",
-    "object": "book",
-    "answer": "backpack",
-    "id": 20
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 4,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Diya places the book on the table. Shrimayi puts the book on the backpack. Manasvini moves the book to the counter. Ali moves the book to the drawer. Soha places the book on the desk. Shreya's favorite spot is the table. Lipika's favorite spot is the counter. Where is the book?",
-    "object": "book",
-    "answer": "desk",
-    "id": 21
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 3,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Arshika puts the pen on the desk. Yamha moves the pen to the backpack. Manasvini moves the pen to the shelf. Shrimayi moves the pen back. Where is the pen?",
-    "object": "pen",
-    "answer": "backpack",
-    "id": 22
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 2,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Yamha places the key on the table. Puneet places the key on the drawer. Kaviya places the key on the counter. Shrujal moves the book to the table. Where is the key?",
-    "object": "key",
-    "answer": "counter",
-    "id": 23
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 3,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Lipika puts the key on the counter. Shreya puts the key on the drawer. Shrujal puts the key on the desk. Puneet puts the key on the shelf. Ali's favorite spot is the counter. Manasvini's favorite spot is the counter. Shrujal's favorite spot is the counter. Where is the key?",
-    "object": "key",
-    "answer": "shelf",
-    "id": 24
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
-    "num_random_distractors": 2,
-    "story": "Lipika moves the mug to the counter. Yamha moves the mug to the table. Nithin puts the mug on the desk. Arshika places the mug on the drawer. Shrujal places the pen on the table. Diya likes reading. Shrujal is a chill guy. Where is the mug?",
-    "object": "mug",
-    "answer": "drawer",
-    "id": 25
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 3,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Yamha places the pen on the shelf. Arshika moves the pen to the backpack. Soha moves the pen to the drawer. Nithin moves the pen back. Where is the pen?",
-    "object": "pen",
-    "answer": "backpack",
-    "id": 26
-  },
-  {
-    "type": "control",
-    "num_transfers": 0,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Ali places the mug on the shelf. Where is the mug?",
-    "object": "mug",
-    "answer": "shelf",
-    "id": 27
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 4,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Nithin moves the key to the counter. Arshika puts the key on the table. Lipika puts the key on the backpack. Ali puts the key on the drawer. Shrujal places the key on the desk. Puneet's favorite spot is the counter. Arshika's favorite spot is the counter. Shrujal's favorite spot is the counter. Where is the key?",
-    "object": "key",
-    "answer": "desk",
-    "id": 28
-  },
-  {
-    "type": "control",
-    "num_transfers": 0,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Diya puts the book on the table. Where is the book?",
-    "object": "book",
-    "answer": "table",
-    "id": 29
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 2,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Manasvini moves the pen to the backpack. Shrujal places the pen on the drawer. Shrimayi puts the pen on the shelf. Diya's favorite spot is the backpack. Kaviya's favorite spot is the backpack. Arshika's favorite spot is the backpack. Where is the pen?",
-    "object": "pen",
-    "answer": "shelf",
-    "id": 30
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 2,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Diya puts the book on the table. Ali moves the book to the shelf. Nithin moves the book back. Where is the book?",
-    "object": "book",
-    "answer": "table",
-    "id": 31
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 0,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Shreya moves the pen to the table. Yamha's favorite spot is the table. Nithin's favorite spot is the table. Ali's favorite spot is the table. Where is the pen?",
-    "object": "pen",
-    "answer": "table",
-    "id": 32
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 1,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Shreya moves the pen to the counter. Soha moves the pen to the shelf. Shrujal puts the book on the counter. Where is the pen?",
-    "object": "pen",
-    "answer": "shelf",
-    "id": 33
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 4,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Yamha moves the key to the table. Manasvini moves the key to the drawer. Shrimayi puts the key on the counter. Soha moves the key to the shelf. Kaviya moves the key to the desk. Shreya's favorite spot is the table. Where is the key?",
-    "object": "key",
-    "answer": "desk",
-    "id": 34
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
-    "num_random_distractors": 2,
-    "story": "Manasvini places the notebook on the drawer. Kaviya puts the notebook on the backpack. Yamha moves the notebook to the counter. Puneet puts the notebook on the shelf. Shrujal moves the pen to the drawer. Diya is a chill guy. Soha was thinking about dinner. Where is the notebook?",
-    "object": "notebook",
-    "answer": "shelf",
-    "id": 35
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 0,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Kaviya moves the mug to the table. Yamha places the key on the table. Where is the mug?",
-    "object": "mug",
-    "answer": "table",
-    "id": 36
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 0,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Shrujal moves the mug to the drawer. Diya places the pen on the drawer. Where is the mug?",
-    "object": "mug",
-    "answer": "drawer",
-    "id": 37
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 0,
-    "num_location_distractors": 1,
-    "num_random_distractors": 1,
-    "story": "Shreya places the mug on the table. Manasvini moves the notebook to the table. Yamha likes reading. Where is the mug?",
-    "object": "mug",
-    "answer": "table",
-    "id": 38
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 0,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Arshika puts the key on the backpack. Shreya's favorite spot is the backpack. Kaviya's favorite spot is the backpack. Where is the key?",
-    "object": "key",
-    "answer": "backpack",
-    "id": 39
-  },
-  {
-    "type": "control",
-    "num_transfers": 0,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Nithin puts the keys on the counter. Where is the keys?",
-    "object": "keys",
-    "answer": "counter",
-    "id": 40
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 3,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Yamha moves the book to the counter. Diya moves the book to the desk. Puneet places the book on the drawer. Soha puts the book on the backpack. Shreya's favorite spot is the counter. Puneet's favorite spot is the counter. Manasvini's favorite spot is the counter. Where is the book?",
-    "object": "book",
-    "answer": "backpack",
-    "id": 41
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 2,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Shrimayi puts the key on the table. Kaviya moves the key to the shelf. Manasvini moves the key back. Where is the key?",
-    "object": "key",
-    "answer": "table",
-    "id": 42
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 2,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Soha moves the pen to the table. Puneet places the pen on the backpack. Shreya moves the pen to the counter. Shrujal's favorite spot is the table. Yamha's favorite spot is the table. Where is the pen?",
-    "object": "pen",
-    "answer": "counter",
-    "id": 43
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Shreya puts the book on the table. Shrimayi puts the book on the backpack. Lipika places the book on the drawer. Yamha puts the book on the counter. Shrimayi's favorite spot is the backpack. Where is the book?",
-    "object": "book",
-    "answer": "counter",
-    "id": 44
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 2,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Lipika moves the key to the drawer. Puneet moves the key to the desk. Diya places the key on the shelf. Ali's favorite spot is the drawer. Yamha's favorite spot is the drawer. Where is the key?",
-    "object": "key",
-    "answer": "shelf",
-    "id": 45
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 0,
-    "num_location_distractors": 1,
-    "num_random_distractors": 2,
-    "story": "Diya moves the notebook to the counter. Kaviya moves the book to the counter. Kaviya is wearing a black shirt. Diya has been busy all day. Where is the notebook?",
-    "object": "notebook",
-    "answer": "counter",
-    "id": 46
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 3,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Puneet places the pen on the desk. Diya moves the pen to the table. Yamha moves the pen to the drawer. Shrimayi moves the pen to the shelf. Arshika's favorite spot is the table. Shrujal's favorite spot is the table. Where is the pen?",
-    "object": "pen",
-    "answer": "shelf",
-    "id": 47
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 4,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Shrujal places the key on the drawer. Arshika places the key on the desk. Lipika puts the key on the shelf. Nithin moves the key to the counter. Shrimayi moves the key to the backpack. Diya moves the book to the desk. Where is the key?",
-    "object": "key",
-    "answer": "backpack",
-    "id": 48
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 4,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Ali puts the mug on the shelf. Diya places the mug on the counter. Nithin puts the mug on the backpack. Arshika moves the mug to the table. Shrimayi moves the mug to the drawer. Lipika's favorite spot is the shelf. Where is the mug?",
-    "object": "mug",
-    "answer": "drawer",
-    "id": 49
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 2,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Shrujal places the notebook on the desk. Yamha moves the notebook to the drawer. Ali moves the notebook back. Where is the notebook?",
-    "object": "notebook",
-    "answer": "desk",
-    "id": 50
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 1,
-    "num_location_distractors": 3,
-    "num_random_distractors": 0,
-    "story": "Ali moves the mug to the backpack. Shreya moves the mug to the counter. Manasvini's favorite spot is the backpack. Yamha's favorite spot is the backpack. Shrujal's favorite spot is the backpack. Where is the mug?",
-    "object": "mug",
-    "answer": "counter",
-    "id": 51
   },
   {
     "type": "control",
@@ -527,206 +47,586 @@
     "story": "Shreya places the notebook on the desk. Where is the notebook?",
     "object": "notebook",
     "answer": "desk",
-    "id": 52
+    "id": 4
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Lipika puts the key on the counter. Shreya puts the key on the basket. Shrujal puts the key on the desk. Puneet puts the key on the table. Ali's favorite spot is the counter. Manasvini's favorite spot is the counter. Where is the key?",
+    "object": "key",
+    "answer": "table",
+    "id": 5
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Diya places the mug on the table. Shrimayi puts the mug on the basket. Shrujal moves the mug to the desk. Shreya puts the book on the table. Diya likes reading. Shrujal enjoys coffee in the morning. Where is the mug?",
+    "object": "mug",
+    "answer": "desk",
+    "id": 6
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Kaviya places the notebook on the desk. Soha places the notebook on the counter. Manasvini moves the notebook to the table. Shreya moves the notebook to the basket. Lipika puts the notebook on the shelf. Puneet's favorite spot is the desk. Nithin's favorite spot is the counter. Where is the notebook?",
+    "object": "notebook",
+    "answer": "shelf",
+    "id": 7
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Puneet moves the mug to the table. Soha places the mug on the floor. Arshika's favorite spot is the table. Where is the mug?",
+    "object": "mug",
+    "answer": "floor",
+    "id": 8
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Shreya moves the pen to the desk. Arshika places the pen on the floor. Lipika puts the pen on the table. Diya places the pen on the shelf. Nithin moves the pen to the counter. Puneet's favorite spot is the desk. Ali's favorite spot is the desk. Where is the pen?",
+    "object": "pen",
+    "answer": "counter",
+    "id": 9
   },
   {
     "type": "red_herring",
     "num_transfers": 0,
     "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Soha places the pen on the basket. Puneet moves the notebook to the basket. Nithin is wearing a black shirt. Where is the pen?",
+    "object": "pen",
+    "answer": "basket",
+    "id": 10
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
     "num_random_distractors": 0,
-    "story": "Arshika places the book on the desk. Shrujal puts the mug on the desk. Where is the book?",
-    "object": "book",
+    "story": "Diya moves the pen to the shelf. Shreya puts the pen on the counter. Nithin moves the pen to the table. Kaviya places the pen on the floor. Arshika moves the pen to the basket. Shrimayi's favorite spot is the shelf. Where is the pen?",
+    "object": "pen",
+    "answer": "basket",
+    "id": 11
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Yamha puts the mug on the floor. Shrimayi places the mug on the table. Kaviya puts the mug on the basket. Nithin places the mug on the counter. Shrujal puts the mug on the desk. Lipika puts the key on the basket. Puneet is wearing a black shirt. Where is the mug?",
+    "object": "mug",
     "answer": "desk",
-    "id": 53
+    "id": 12
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Shreya puts the book on the floor. Shrimayi moves the book to the table. Soha's favorite spot is the floor. Shreya's favorite spot is the floor. Where is the book?",
+    "object": "book",
+    "answer": "table",
+    "id": 13
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Yamha places the notebook on the basket. Soha puts the key on the basket. Yamha has been busy all day. Where is the notebook?",
+    "object": "notebook",
+    "answer": "basket",
+    "id": 14
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Arshika puts the book on the desk. Manasvini puts the book on the basket. Puneet puts the book on the table. Shrimayi moves the book to the shelf. Nithin places the mug on the desk. Diya smiled and walked away. Where is the book?",
+    "object": "book",
+    "answer": "shelf",
+    "id": 15
   },
   {
     "type": "red_herring",
     "num_transfers": 1,
     "num_location_distractors": 1,
     "num_random_distractors": 2,
-    "story": "Arshika puts the key on the shelf. Nithin places the key on the backpack. Shrujal places the notebook on the shelf. Nithin was thinking about dinner. Diya enjoys coffee in the morning. Where is the key?",
-    "object": "key",
-    "answer": "backpack",
-    "id": 54
+    "story": "Puneet puts the mug on the counter. Kaviya moves the mug to the basket. Manasvini moves the book to the counter. Arshika is wearing a black shirt. Shrujal smiled and walked away. Where is the mug?",
+    "object": "mug",
+    "answer": "basket",
+    "id": 16
   },
   {
-    "type": "distractor",
-    "num_transfers": 0,
-    "num_location_distractors": 2,
-    "num_random_distractors": 0,
-    "story": "Kaviya puts the notebook on the backpack. Shrimayi's favorite spot is the backpack. Diya's favorite spot is the backpack. Where is the notebook?",
-    "object": "notebook",
-    "answer": "backpack",
-    "id": 55
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Nithin moves the pen to the shelf. Lipika places the pen on the basket. Manasvini puts the pen on the table. Shrimayi puts the pen on the floor. Shrujal moves the key to the basket. Yamha smiled and walked away. Where is the pen?",
+    "object": "pen",
+    "answer": "floor",
+    "id": 17
   },
   {
     "type": "red_herring",
     "num_transfers": 1,
     "num_location_distractors": 1,
     "num_random_distractors": 0,
-    "story": "Diya moves the book to the backpack. Shrujal moves the book to the table. Soha puts the key on the backpack. Where is the book?",
+    "story": "Yamha places the book on the floor. Diya places the book on the shelf. Ali moves the pen to the floor. Where is the book?",
     "object": "book",
+    "answer": "shelf",
+    "id": 18
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Diya puts the notebook on the basket. Lipika places the notebook on the desk. Puneet moves the notebook to the table. Yamha puts the notebook on the floor. Kaviya places the book on the basket. Shrimayi likes reading. Yamha forgot to eat lunch. Where is the notebook?",
+    "object": "notebook",
+    "answer": "floor",
+    "id": 19
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Ali places the mug on the table. Shrujal puts the mug on the counter. Diya moves the mug to the desk. Lipika places the mug on the floor. Soha places the mug on the basket. Shrimayi places the notebook on the desk. Arshika was thinking about dinner. Soha is a chill guy. Where is the mug?",
+    "object": "mug",
+    "answer": "basket",
+    "id": 20
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Shrujal places the book on the desk. Lipika moves the book to the shelf. Manasvini moves the notebook to the desk. Soha forgot to eat lunch. Where is the book?",
+    "object": "book",
+    "answer": "shelf",
+    "id": 21
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Kaviya moves the key to the counter. Shrujal moves the key to the table. Ali places the key on the shelf. Diya puts the key on the desk. Manasvini puts the key on the basket. Yamha puts the notebook on the counter. Where is the key?",
+    "object": "key",
+    "answer": "basket",
+    "id": 22
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Lipika places the book on the shelf. Shreya's favorite spot is the shelf. Where is the book?",
+    "object": "book",
+    "answer": "shelf",
+    "id": 23
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Shrujal moves the pen to the desk. Shrimayi places the pen on the counter. Puneet places the pen on the basket. Soha puts the pen on the floor. Yamha's favorite spot is the desk. Diya's favorite spot is the counter. Kaviya's favorite spot is the desk. Where is the pen?",
+    "object": "pen",
+    "answer": "floor",
+    "id": 24
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Shrimayi puts the key on the floor. Puneet places the key on the shelf. Kaviya puts the key on the table. Diya's favorite spot is the floor. Soha's favorite spot is the floor. Where is the key?",
+    "object": "key",
     "answer": "table",
-    "id": 56
+    "id": 25
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Shreya moves the pen to the basket. Manasvini moves the notebook to the basket. Where is the pen?",
+    "object": "pen",
+    "answer": "basket",
+    "id": 26
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Kaviya moves the notebook to the floor. Ali puts the notebook on the shelf. Manasvini puts the notebook on the counter. Diya places the notebook on the basket. Nithin's favorite spot is the shelf. Where is the notebook?",
+    "object": "notebook",
+    "answer": "basket",
+    "id": 27
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Lipika puts the key on the basket. Puneet moves the key to the counter. Shrimayi places the key on the shelf. Shrujal places the book on the basket. Where is the key?",
+    "object": "key",
+    "answer": "shelf",
+    "id": 28
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Arshika moves the key to the counter. Ali puts the key on the table. Kaviya puts the key on the desk. Manasvini moves the key to the shelf. Diya places the book on the counter. Diya likes reading. Arshika is wearing a black shirt. Where is the key?",
+    "object": "key",
+    "answer": "shelf",
+    "id": 29
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Puneet puts the key on the table. Diya puts the key on the basket. Soha moves the key to the floor. Nithin puts the key on the shelf. Arshika's favorite spot is the basket. Manasvini's favorite spot is the table. Where is the key?",
+    "object": "key",
+    "answer": "shelf",
+    "id": 30
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Soha puts the book on the basket. Shrujal places the book on the counter. Yamha places the key on the basket. Where is the book?",
+    "object": "book",
+    "answer": "counter",
+    "id": 31
   },
   {
     "type": "distractor",
     "num_transfers": 2,
     "num_location_distractors": 3,
     "num_random_distractors": 0,
-    "story": "Ali places the mug on the table. Manasvini moves the mug to the backpack. Kaviya places the mug on the counter. Arshika's favorite spot is the table. Kaviya's favorite spot is the table. Shrujal's favorite spot is the table. Where is the mug?",
+    "story": "Shrujal moves the book to the shelf. Puneet puts the book on the desk. Manasvini moves the book to the floor. Arshika's favorite spot is the shelf. Arshika's favorite spot is the shelf. Yamha's favorite spot is the shelf. Where is the book?",
+    "object": "book",
+    "answer": "floor",
+    "id": 32
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Arshika puts the key on the floor. Shreya's favorite spot is the floor. Kaviya's favorite spot is the floor. Where is the key?",
+    "object": "key",
+    "answer": "floor",
+    "id": 33
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Lipika places the book on the table. Diya's favorite spot is the table. Nithin's favorite spot is the table. Yamha's favorite spot is the table. Where is the book?",
+    "object": "book",
+    "answer": "table",
+    "id": 34
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Lipika moves the key to the basket. Puneet moves the key to the desk. Diya places the key on the table. Ali's favorite spot is the basket. Yamha's favorite spot is the basket. Where is the key?",
+    "object": "key",
+    "answer": "table",
+    "id": 35
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Yamha puts the pen on the shelf. Shrimayi places the pen on the floor. Shreya places the pen on the counter. Arshika puts the pen on the basket. Diya moves the pen to the table. Ali moves the mug to the shelf. Where is the pen?",
+    "object": "pen",
+    "answer": "table",
+    "id": 36
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Shrimayi moves the mug to the basket. Puneet moves the mug to the floor. Ali puts the mug on the counter. Soha places the mug on the shelf. Shrujal's favorite spot is the floor. Where is the mug?",
     "object": "mug",
-    "answer": "counter",
-    "id": 57
+    "answer": "shelf",
+    "id": 37
   },
   {
     "type": "red_herring",
     "num_transfers": 4,
     "num_location_distractors": 1,
     "num_random_distractors": 1,
-    "story": "Puneet places the pen on the desk. Soha puts the pen on the backpack. Yamha places the pen on the drawer. Kaviya places the pen on the table. Lipika moves the pen to the counter. Arshika moves the mug to the desk. Shrimayi likes reading. Where is the pen?",
+    "story": "Shreya puts the pen on the counter. Soha places the pen on the basket. Lipika places the pen on the table. Shrimayi places the pen on the desk. Yamha places the pen on the shelf. Shrujal puts the notebook on the basket. Shrimayi is wearing a black shirt. Where is the pen?",
     "object": "pen",
-    "answer": "counter",
-    "id": 58
+    "answer": "shelf",
+    "id": 38
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Puneet places the book on the floor. Arshika's favorite spot is the floor. Where is the book?",
+    "object": "book",
+    "answer": "floor",
+    "id": 39
   },
   {
     "type": "distractor",
     "num_transfers": 1,
     "num_location_distractors": 1,
     "num_random_distractors": 0,
-    "story": "Lipika moves the key to the backpack. Kaviya puts the key on the table. Puneet's favorite spot is the backpack. Where is the key?",
-    "object": "key",
-    "answer": "table",
-    "id": 59
+    "story": "Ali puts the notebook on the basket. Yamha puts the notebook on the counter. Lipika's favorite spot is the basket. Where is the notebook?",
+    "object": "notebook",
+    "answer": "counter",
+    "id": 40
   },
   {
-    "type": "red_herring",
-    "num_transfers": 4,
+    "type": "distractor",
+    "num_transfers": 0,
     "num_location_distractors": 1,
     "num_random_distractors": 0,
-    "story": "Manasvini moves the notebook to the drawer. Arshika puts the notebook on the desk. Shrujal puts the notebook on the table. Ali puts the notebook on the counter. Yamha places the notebook on the backpack. Soha places the key on the drawer. Where is the notebook?",
-    "object": "notebook",
-    "answer": "backpack",
-    "id": 60
+    "story": "Soha moves the mug to the desk. Arshika's favorite spot is the desk. Where is the mug?",
+    "object": "mug",
+    "answer": "desk",
+    "id": 41
   },
   {
     "type": "red_herring",
     "num_transfers": 2,
     "num_location_distractors": 1,
     "num_random_distractors": 2,
-    "story": "Arshika moves the pen to the backpack. Shrimayi puts the pen on the counter. Lipika moves the pen to the table. Soha places the key on the backpack. Puneet smiled and walked away. Puneet likes reading. Where is the pen?",
+    "story": "Puneet puts the book on the shelf. Shrujal moves the book to the counter. Soha places the book on the basket. Yamha moves the notebook to the shelf. Lipika enjoys coffee in the morning. Soha is wearing a black shirt. Where is the book?",
+    "object": "book",
+    "answer": "basket",
+    "id": 42
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Nithin moves the pen to the table. Shrimayi moves the mug to the table. Kaviya has been busy all day. Arshika is wearing a black shirt. Where is the pen?",
     "object": "pen",
     "answer": "table",
+    "id": 43
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Shrimayi moves the book to the basket. Yamha moves the book to the table. Nithin's favorite spot is the basket. Soha's favorite spot is the basket. Ali's favorite spot is the basket. Where is the book?",
+    "object": "book",
+    "answer": "table",
+    "id": 44
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Ali moves the pen to the shelf. Kaviya puts the pen on the desk. Lipika places the pen on the counter. Shreya moves the pen to the basket. Diya puts the pen on the floor. Shrujal's favorite spot is the shelf. Ali's favorite spot is the shelf. Where is the pen?",
+    "object": "pen",
+    "answer": "floor",
+    "id": 45
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Soha places the book on the shelf. Arshika places the book on the basket. Diya's favorite spot is the shelf. Manasvini's favorite spot is the shelf. Yamha's favorite spot is the shelf. Where is the book?",
+    "object": "book",
+    "answer": "basket",
+    "id": 46
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Soha places the notebook on the shelf. Shrimayi places the notebook on the desk. Shreya puts the notebook on the counter. Lipika's favorite spot is the shelf. Yamha's favorite spot is the shelf. Where is the notebook?",
+    "object": "notebook",
+    "answer": "counter",
+    "id": 47
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Puneet moves the mug to the desk. Diya puts the mug on the basket. Yamha places the mug on the table. Shrimayi's favorite spot is the desk. Where is the mug?",
+    "object": "mug",
+    "answer": "table",
+    "id": 48
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Soha moves the key to the counter. Nithin's favorite spot is the counter. Shrujal's favorite spot is the counter. Manasvini's favorite spot is the counter. Where is the key?",
+    "object": "key",
+    "answer": "counter",
+    "id": 49
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Shreya moves the notebook to the table. Nithin moves the notebook to the basket. Ali places the book on the table. Where is the notebook?",
+    "object": "notebook",
+    "answer": "basket",
+    "id": 50
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Diya places the key on the desk. Shrimayi moves the mug to the desk. Puneet has been busy all day. Nithin enjoys coffee in the morning. Where is the key?",
+    "object": "key",
+    "answer": "desk",
+    "id": 51
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Kaviya places the pen on the basket. Shrujal places the pen on the counter. Diya puts the key on the basket. Manasvini forgot to eat lunch. Shreya is wearing a black shirt. Where is the pen?",
+    "object": "pen",
+    "answer": "counter",
+    "id": 52
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Arshika moves the mug to the table. Yamha puts the mug on the shelf. Nithin places the mug on the basket. Shreya places the notebook on the table. Manasvini is wearing a black shirt. Where is the mug?",
+    "object": "mug",
+    "answer": "basket",
+    "id": 53
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Arshika moves the pen to the floor. Shrimayi puts the pen on the counter. Lipika moves the pen to the shelf. Soha places the key on the floor. Puneet smiled and walked away. Puneet likes reading. Where is the pen?",
+    "object": "pen",
+    "answer": "shelf",
+    "id": 54
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "story": "Manasvini puts the pen on the desk. Diya puts the pen on the counter. Yamha places the pen on the shelf. Diya's favorite spot is the desk. Nithin's favorite spot is the desk. Where is the pen?",
+    "object": "pen",
+    "answer": "shelf",
+    "id": 55
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Arshika puts the notebook on the basket. Yamha moves the notebook to the counter. Kaviya puts the notebook on the desk. Manasvini places the notebook on the shelf. Yamha's favorite spot is the counter. Lipika's favorite spot is the basket. Ali's favorite spot is the basket. Where is the notebook?",
+    "object": "notebook",
+    "answer": "shelf",
+    "id": 56
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "story": "Yamha places the book on the desk. Kaviya places the book on the counter. Shrujal places the book on the shelf. Ali moves the book to the table. Shreya puts the key on the counter. Lipika has been busy all day. Arshika enjoys coffee in the morning. Where is the book?",
+    "object": "book",
+    "answer": "table",
+    "id": 57
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "story": "Manasvini places the notebook on the desk. Shreya puts the notebook on the basket. Soha puts the notebook on the counter. Ali puts the notebook on the shelf. Diya puts the notebook on the floor. Ali's favorite spot is the counter. Where is the notebook?",
+    "object": "notebook",
+    "answer": "floor",
+    "id": 58
+  },
+  {
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "story": "Lipika places the book on the counter. Diya moves the book to the floor. Kaviya puts the book on the shelf. Nithin moves the book to the desk. Arshika places the pen on the floor. Lipika is wearing a black shirt. Where is the book?",
+    "object": "book",
+    "answer": "desk",
+    "id": 59
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Diya moves the notebook to the shelf. Lipika puts the notebook on the basket. Yamha's favorite spot is the shelf. Nithin's favorite spot is the shelf. Puneet's favorite spot is the shelf. Where is the notebook?",
+    "object": "notebook",
+    "answer": "basket",
+    "id": 60
+  },
+  {
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "story": "Shreya places the pen on the floor. Puneet puts the pen on the table. Yamha puts the pen on the basket. Kaviya places the pen on the desk. Nithin puts the pen on the counter. Arshika's favorite spot is the table. Ali's favorite spot is the floor. Arshika's favorite spot is the floor. Where is the pen?",
+    "object": "pen",
+    "answer": "counter",
     "id": 61
   },
   {
     "type": "distractor",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
+    "num_transfers": 2,
+    "num_location_distractors": 2,
     "num_random_distractors": 0,
-    "story": "Kaviya moves the key to the table. Arshika moves the key to the counter. Yamha moves the key to the drawer. Diya places the key on the desk. Nithin's favorite spot is the counter. Where is the key?",
-    "object": "key",
-    "answer": "desk",
+    "story": "Lipika puts the notebook on the floor. Shrimayi moves the notebook to the shelf. Nithin puts the notebook on the basket. Lipika's favorite spot is the floor. Ali's favorite spot is the floor. Where is the notebook?",
+    "object": "notebook",
+    "answer": "basket",
     "id": 62
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Diya places the pen on the table. Shrimayi puts the pen on the counter. Shrujal puts the pen on the desk. Manasvini moves the pen to the shelf. Shreya moves the mug to the table. Where is the pen?",
-    "object": "pen",
-    "answer": "shelf",
-    "id": 63
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
-    "num_random_distractors": 1,
-    "story": "Yamha moves the mug to the shelf. Puneet moves the mug to the desk. Nithin moves the mug to the backpack. Arshika places the mug on the counter. Shreya puts the notebook on the shelf. Puneet is a chill guy. Where is the mug?",
-    "object": "mug",
-    "answer": "counter",
-    "id": 64
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 2,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Kaviya places the mug on the counter. Shreya moves the mug to the drawer. Shrujal moves the mug back. Where is the mug?",
-    "object": "mug",
-    "answer": "counter",
-    "id": 65
-  },
-  {
-    "type": "distractor",
-    "num_transfers": 2,
-    "num_location_distractors": 1,
-    "num_random_distractors": 0,
-    "story": "Yamha moves the pen to the desk. Diya puts the pen on the drawer. Puneet places the pen on the shelf. Shrimayi's favorite spot is the desk. Where is the pen?",
-    "object": "pen",
-    "answer": "shelf",
-    "id": 66
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 3,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Ali puts the mug on the backpack. Shrujal moves the mug to the counter. Shrimayi moves the mug to the table. Lipika moves the mug back. Where is the mug?",
-    "object": "mug",
-    "answer": "counter",
-    "id": 67
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 3,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Soha places the book on the counter. Nithin moves the book to the desk. Kaviya moves the book to the shelf. Shreya moves the book back. Where is the book?",
-    "object": "book",
-    "answer": "desk",
-    "id": 68
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 2,
-    "num_location_distractors": 1,
-    "num_random_distractors": 2,
-    "story": "Puneet puts the book on the table. Shrujal moves the book to the counter. Soha places the book on the drawer. Yamha moves the notebook to the table. Lipika enjoys coffee in the morning. Soha is wearing a black shirt. Where is the book?",
-    "object": "book",
-    "answer": "drawer",
-    "id": 69
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 2,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Nithin puts the key on the counter. Soha moves the key to the backpack. Lipika moves the key back. Where is the key?",
-    "object": "key",
-    "answer": "counter",
-    "id": 70
-  },
-  {
-    "type": "reversal",
-    "num_transfers": 2,
-    "num_location_distractors": 0,
-    "num_random_distractors": 0,
-    "story": "Arshika puts the mug on the shelf. Manasvini moves the mug to the counter. Diya moves the mug back. Where is the mug?",
-    "object": "mug",
-    "answer": "shelf",
-    "id": 71
-  },
-  {
-    "type": "red_herring",
-    "num_transfers": 3,
-    "num_location_distractors": 1,
-    "num_random_distractors": 1,
-    "story": "Arshika moves the book to the drawer. Shreya moves the book to the desk. Puneet places the book on the counter. Diya puts the book on the shelf. Shrimayi puts the notebook on the desk. Puneet is wearing a black shirt. Where is the book?",
-    "object": "book",
-    "answer": "shelf",
-    "id": 72
   }
 ]

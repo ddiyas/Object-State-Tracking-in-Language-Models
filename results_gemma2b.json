@@ -1,0 +1,1199 @@
+[
+  {
+    "id": 0,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "shelf",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "shelf",
+      "**",
+      "bookshelf",
+      "book",
+      "**"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nDiya puts the book on the shelf. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 1,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
+    "num_random_distractors": 0,
+    "object": "mug",
+    "correct_answer": "table",
+    "predicted": "table",
+    "top5_tokens": [
+      "table",
+      "**",
+      "tabletop",
+      "",
+      "*"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nAli places the mug on the table. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 2,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "counter",
+    "predicted": "counter",
+    "top5_tokens": [
+      "counter",
+      "**",
+      "countertop",
+      "",
+      "*"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nNithin puts the key on the counter. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 3,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "table",
+    "predicted": "table",
+    "top5_tokens": [
+      "table",
+      "**",
+      "*",
+      "",
+      "tabletop"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nKaviya moves the pen to the table. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 4,
+    "type": "control",
+    "num_transfers": 0,
+    "num_location_distractors": 0,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "desk",
+    "predicted": "desk",
+    "top5_tokens": [
+      "desk",
+      "**",
+      "desktop",
+      "table",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nShreya places the notebook on the desk. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 5,
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "table",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "counter",
+      "table",
+      "desk",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nLipika puts the key on the counter. Shreya puts the key on the basket. Shrujal puts the key on the desk. Puneet puts the key on the table. Ali's favorite spot is the counter. Manasvini's favorite spot is the counter. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 6,
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "mug",
+    "correct_answer": "desk",
+    "predicted": "table",
+    "top5_tokens": [
+      "**",
+      "table",
+      "desk",
+      "following",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nDiya places the mug on the table. Shrimayi puts the mug on the basket. Shrujal moves the mug to the desk. Shreya puts the book on the table. Diya likes reading. Shrujal enjoys coffee in the morning. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 7,
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "shelf",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "desk",
+      "table",
+      "counter"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nKaviya places the notebook on the desk. Soha places the notebook on the counter. Manasvini moves the notebook to the table. Shreya moves the notebook to the basket. Lipika puts the notebook on the shelf. Puneet's favorite spot is the desk. Nithin's favorite spot is the counter. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 8,
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "mug",
+    "correct_answer": "floor",
+    "predicted": "floor",
+    "top5_tokens": [
+      "floor",
+      "**",
+      "table",
+      "ground",
+      "*"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nPuneet moves the mug to the table. Soha places the mug on the floor. Arshika's favorite spot is the table. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 9,
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "counter",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "counter",
+      "table",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShreya moves the pen to the desk. Arshika places the pen on the floor. Lipika puts the pen on the table. Diya places the pen on the shelf. Nithin moves the pen to the counter. Puneet's favorite spot is the desk. Ali's favorite spot is the desk. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 10,
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "pen",
+    "correct_answer": "basket",
+    "predicted": "table",
+    "top5_tokens": [
+      "basket",
+      "**",
+      "table",
+      "",
+      "basketball"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nSoha places the pen on the basket. Puneet moves the notebook to the basket. Nithin is wearing a black shirt. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 11,
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "basket",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "table",
+      "",
+      "*"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nDiya moves the pen to the shelf. Shreya puts the pen on the counter. Nithin moves the pen to the table. Kaviya places the pen on the floor. Arshika moves the pen to the basket. Shrimayi's favorite spot is the shelf. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 12,
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "mug",
+    "correct_answer": "desk",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "counter",
+      "table",
+      "basket"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nYamha puts the mug on the floor. Shrimayi places the mug on the table. Kaviya puts the mug on the basket. Nithin places the mug on the counter. Shrujal puts the mug on the desk. Lipika puts the key on the basket. Puneet is wearing a black shirt. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 13,
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "table",
+    "predicted": "table",
+    "top5_tokens": [
+      "**",
+      "table",
+      "floor",
+      "*",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nShreya puts the book on the floor. Shrimayi moves the book to the table. Soha's favorite spot is the floor. Shreya's favorite spot is the floor. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 14,
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "notebook",
+    "correct_answer": "basket",
+    "predicted": "table",
+    "top5_tokens": [
+      "basket",
+      "**",
+      "same",
+      "table",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nYamha places the notebook on the basket. Soha puts the key on the basket. Yamha has been busy all day. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 15,
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "book",
+    "correct_answer": "shelf",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "desk",
+      "table",
+      "shelves"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nArshika puts the book on the desk. Manasvini puts the book on the basket. Puneet puts the book on the table. Shrimayi moves the book to the shelf. Nithin places the mug on the desk. Diya smiled and walked away. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 16,
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "mug",
+    "correct_answer": "basket",
+    "predicted": "counter",
+    "top5_tokens": [
+      "counter",
+      "**",
+      "basket",
+      "countertop",
+      "*"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nPuneet puts the mug on the counter. Kaviya moves the mug to the basket. Manasvini moves the book to the counter. Arshika is wearing a black shirt. Shrujal smiled and walked away. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 17,
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "pen",
+    "correct_answer": "floor",
+    "predicted": "table",
+    "top5_tokens": [
+      "**",
+      "table",
+      "floor",
+      "shelf",
+      "basket"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nNithin moves the pen to the shelf. Lipika places the pen on the basket. Manasvini puts the pen on the table. Shrimayi puts the pen on the floor. Shrujal moves the key to the basket. Yamha smiled and walked away. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 18,
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "shelf",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "floor",
+      "*",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nYamha places the book on the floor. Diya places the book on the shelf. Ali moves the pen to the floor. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 19,
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "notebook",
+    "correct_answer": "floor",
+    "predicted": "table",
+    "top5_tokens": [
+      "**",
+      "table",
+      "floor",
+      "desk",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nDiya puts the notebook on the basket. Lipika places the notebook on the desk. Puneet moves the notebook to the table. Yamha puts the notebook on the floor. Kaviya places the book on the basket. Shrimayi likes reading. Yamha forgot to eat lunch. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 20,
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "mug",
+    "correct_answer": "basket",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "basket",
+      "desk",
+      "table",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nAli places the mug on the table. Shrujal puts the mug on the counter. Diya moves the mug to the desk. Lipika places the mug on the floor. Soha places the mug on the basket. Shrimayi places the notebook on the desk. Arshika was thinking about dinner. Soha is a chill guy. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 21,
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "book",
+    "correct_answer": "shelf",
+    "predicted": "desk",
+    "top5_tokens": [
+      "desk",
+      "shelf",
+      "**",
+      "bookshelf",
+      "desktop"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShrujal places the book on the desk. Lipika moves the book to the shelf. Manasvini moves the notebook to the desk. Soha forgot to eat lunch. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 22,
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "basket",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "counter",
+      "shelf",
+      "basket"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nKaviya moves the key to the counter. Shrujal moves the key to the table. Ali places the key on the shelf. Diya puts the key on the desk. Manasvini puts the key on the basket. Yamha puts the notebook on the counter. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 23,
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "shelf",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "shelf",
+      "**",
+      "bookshelf",
+      "book",
+      "**"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nLipika places the book on the shelf. Shreya's favorite spot is the shelf. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 24,
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "floor",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "counter",
+      "floor",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShrujal moves the pen to the desk. Shrimayi places the pen on the counter. Puneet places the pen on the basket. Soha puts the pen on the floor. Yamha's favorite spot is the desk. Diya's favorite spot is the counter. Kaviya's favorite spot is the desk. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 25,
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "table",
+    "predicted": "floor",
+    "top5_tokens": [
+      "**",
+      "floor",
+      "table",
+      "ground",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShrimayi puts the key on the floor. Puneet places the key on the shelf. Kaviya puts the key on the table. Diya's favorite spot is the floor. Soha's favorite spot is the floor. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 26,
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "basket",
+    "predicted": "floor",
+    "top5_tokens": [
+      "basket",
+      "**",
+      "floor",
+      "table",
+      "ground"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShreya moves the pen to the basket. Manasvini moves the notebook to the basket. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 27,
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "basket",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "",
+      "***",
+      "counter"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nKaviya moves the notebook to the floor. Ali puts the notebook on the shelf. Manasvini puts the notebook on the counter. Diya places the notebook on the basket. Nithin's favorite spot is the shelf. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 28,
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "shelf",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "counter",
+      "shelf",
+      "basket",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nLipika puts the key on the basket. Puneet moves the key to the counter. Shrimayi places the key on the shelf. Shrujal places the book on the basket. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 29,
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "key",
+    "correct_answer": "shelf",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "table",
+      "shelf",
+      "counter"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nArshika moves the key to the counter. Ali puts the key on the table. Kaviya puts the key on the desk. Manasvini moves the key to the shelf. Diya places the book on the counter. Diya likes reading. Arshika is wearing a black shirt. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 30,
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "shelf",
+    "predicted": "floor",
+    "top5_tokens": [
+      "**",
+      "floor",
+      "table",
+      "basket",
+      "shelf"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nPuneet puts the key on the table. Diya puts the key on the basket. Soha moves the key to the floor. Nithin puts the key on the shelf. Arshika's favorite spot is the basket. Manasvini's favorite spot is the table. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 31,
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "counter",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "basket",
+      "counter",
+      "",
+      "*"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nSoha puts the book on the basket. Shrujal places the book on the counter. Yamha places the key on the basket. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 32,
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "floor",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "",
+      "*",
+      "shelves"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShrujal moves the book to the shelf. Puneet puts the book on the desk. Manasvini moves the book to the floor. Arshika's favorite spot is the shelf. Arshika's favorite spot is the shelf. Yamha's favorite spot is the shelf. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 33,
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "floor",
+    "predicted": "floor",
+    "top5_tokens": [
+      "floor",
+      "**",
+      "ground",
+      "*",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nArshika puts the key on the floor. Shreya's favorite spot is the floor. Kaviya's favorite spot is the floor. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 34,
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "table",
+    "predicted": "table",
+    "top5_tokens": [
+      "table",
+      "**",
+      "",
+      "tabletop",
+      "*"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nLipika places the book on the table. Diya's favorite spot is the table. Nithin's favorite spot is the table. Yamha's favorite spot is the table. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 35,
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "table",
+    "predicted": "table",
+    "top5_tokens": [
+      "table",
+      "**",
+      "basket",
+      "desk",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nLipika moves the key to the basket. Puneet moves the key to the desk. Diya places the key on the table. Ali's favorite spot is the basket. Yamha's favorite spot is the basket. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 36,
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "table",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "counter",
+      "table",
+      "",
+      "basket"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nYamha puts the pen on the shelf. Shrimayi places the pen on the floor. Shreya places the pen on the counter. Arshika puts the pen on the basket. Diya moves the pen to the table. Ali moves the mug to the shelf. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 37,
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "mug",
+    "correct_answer": "shelf",
+    "predicted": "floor",
+    "top5_tokens": [
+      "floor",
+      "**",
+      "ground",
+      "*",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShrimayi moves the mug to the basket. Puneet moves the mug to the floor. Ali puts the mug on the counter. Soha places the mug on the shelf. Shrujal's favorite spot is the floor. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 38,
+    "type": "red_herring",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "pen",
+    "correct_answer": "shelf",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "shelf",
+      "table",
+      "counter"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShreya puts the pen on the counter. Soha places the pen on the basket. Lipika places the pen on the table. Shrimayi places the pen on the desk. Yamha places the pen on the shelf. Shrujal puts the notebook on the basket. Shrimayi is wearing a black shirt. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 39,
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "floor",
+    "predicted": "floor",
+    "top5_tokens": [
+      "floor",
+      "**",
+      "ground",
+      "*",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nPuneet places the book on the floor. Arshika's favorite spot is the floor. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 40,
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "counter",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "counter",
+      "basket",
+      "*",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nAli puts the notebook on the basket. Yamha puts the notebook on the counter. Lipika's favorite spot is the basket. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 41,
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "mug",
+    "correct_answer": "desk",
+    "predicted": "desk",
+    "top5_tokens": [
+      "desk",
+      "**",
+      "desktop",
+      "table",
+      "desks"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nSoha moves the mug to the desk. Arshika's favorite spot is the desk. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 42,
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "book",
+    "correct_answer": "basket",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "counter",
+      "basket",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nPuneet puts the book on the shelf. Shrujal moves the book to the counter. Soha places the book on the basket. Yamha moves the notebook to the shelf. Lipika enjoys coffee in the morning. Soha is wearing a black shirt. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 43,
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "pen",
+    "correct_answer": "table",
+    "predicted": "table",
+    "top5_tokens": [
+      "table",
+      "**",
+      "table",
+      "*",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nNithin moves the pen to the table. Shrimayi moves the mug to the table. Kaviya has been busy all day. Arshika is wearing a black shirt. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 44,
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "table",
+    "predicted": "table",
+    "top5_tokens": [
+      "**",
+      "basket",
+      "table",
+      "",
+      "*"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nShrimayi moves the book to the basket. Yamha moves the book to the table. Nithin's favorite spot is the basket. Soha's favorite spot is the basket. Ali's favorite spot is the basket. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 45,
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "floor",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "desk",
+      "counter",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nAli moves the pen to the shelf. Kaviya puts the pen on the desk. Lipika places the pen on the counter. Shreya moves the pen to the basket. Diya puts the pen on the floor. Shrujal's favorite spot is the shelf. Ali's favorite spot is the shelf. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 46,
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "book",
+    "correct_answer": "basket",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "basket",
+      "bookshelf",
+      "shelves"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nSoha places the book on the shelf. Arshika places the book on the basket. Diya's favorite spot is the shelf. Manasvini's favorite spot is the shelf. Yamha's favorite spot is the shelf. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 47,
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "counter",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "desk",
+      "counter",
+      "shelves"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nSoha places the notebook on the shelf. Shrimayi places the notebook on the desk. Shreya puts the notebook on the counter. Lipika's favorite spot is the shelf. Yamha's favorite spot is the shelf. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 48,
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "mug",
+    "correct_answer": "table",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "table",
+      "",
+      "***"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nPuneet moves the mug to the desk. Diya puts the mug on the basket. Yamha places the mug on the table. Shrimayi's favorite spot is the desk. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 49,
+    "type": "distractor",
+    "num_transfers": 0,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "key",
+    "correct_answer": "counter",
+    "predicted": "counter",
+    "top5_tokens": [
+      "counter",
+      "**",
+      "countertop",
+      "count",
+      "counter"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nSoha moves the key to the counter. Nithin's favorite spot is the counter. Shrujal's favorite spot is the counter. Manasvini's favorite spot is the counter. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 50,
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "basket",
+    "predicted": "table",
+    "top5_tokens": [
+      "**",
+      "table",
+      "",
+      "*",
+      "**"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShreya moves the notebook to the table. Nithin moves the notebook to the basket. Ali places the book on the table. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 51,
+    "type": "red_herring",
+    "num_transfers": 0,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "key",
+    "correct_answer": "desk",
+    "predicted": "desk",
+    "top5_tokens": [
+      "desk",
+      "**",
+      "table",
+      "desktop",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nDiya places the key on the desk. Shrimayi moves the mug to the desk. Puneet has been busy all day. Nithin enjoys coffee in the morning. Where is the key?<end_of_turn>\n<start_of_turn>model\nThe key is on the"
+  },
+  {
+    "id": 52,
+    "type": "red_herring",
+    "num_transfers": 1,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "pen",
+    "correct_answer": "counter",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "basket",
+      "counter",
+      ":",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nKaviya places the pen on the basket. Shrujal places the pen on the counter. Diya puts the key on the basket. Manasvini forgot to eat lunch. Shreya is wearing a black shirt. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 53,
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "mug",
+    "correct_answer": "basket",
+    "predicted": "table",
+    "top5_tokens": [
+      "table",
+      "**",
+      "shelf",
+      "basket",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nArshika moves the mug to the table. Yamha puts the mug on the shelf. Nithin places the mug on the basket. Shreya places the notebook on the table. Manasvini is wearing a black shirt. Where is the mug?<end_of_turn>\n<start_of_turn>model\nThe mug is on the"
+  },
+  {
+    "id": 54,
+    "type": "red_herring",
+    "num_transfers": 2,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "pen",
+    "correct_answer": "shelf",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "counter",
+      "floor",
+      ""
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nArshika moves the pen to the floor. Shrimayi puts the pen on the counter. Lipika moves the pen to the shelf. Soha places the key on the floor. Puneet smiled and walked away. Puneet likes reading. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 55,
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "shelf",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "",
+      "counter",
+      "table"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nManasvini puts the pen on the desk. Diya puts the pen on the counter. Yamha places the pen on the shelf. Diya's favorite spot is the desk. Nithin's favorite spot is the desk. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 56,
+    "type": "distractor",
+    "num_transfers": 3,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "shelf",
+    "predicted": "desk",
+    "top5_tokens": [
+      "**",
+      "desk",
+      "counter",
+      "shelf",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nArshika puts the notebook on the basket. Yamha moves the notebook to the counter. Kaviya puts the notebook on the desk. Manasvini places the notebook on the shelf. Yamha's favorite spot is the counter. Lipika's favorite spot is the basket. Ali's favorite spot is the basket. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 57,
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 2,
+    "object": "book",
+    "correct_answer": "table",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "counter",
+      "desk",
+      "table",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nYamha places the book on the desk. Kaviya places the book on the counter. Shrujal places the book on the shelf. Ali moves the book to the table. Shreya puts the key on the counter. Lipika has been busy all day. Arshika enjoys coffee in the morning. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 58,
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 1,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "floor",
+    "predicted": "counter",
+    "top5_tokens": [
+      "**",
+      "counter",
+      "countertop",
+      "*",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nManasvini places the notebook on the desk. Shreya puts the notebook on the basket. Soha puts the notebook on the counter. Ali puts the notebook on the shelf. Diya puts the notebook on the floor. Ali's favorite spot is the counter. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 59,
+    "type": "red_herring",
+    "num_transfers": 3,
+    "num_location_distractors": 1,
+    "num_random_distractors": 1,
+    "object": "book",
+    "correct_answer": "desk",
+    "predicted": "desk",
+    "top5_tokens": [
+      "desk",
+      "**",
+      "floor",
+      "counter",
+      "table"
+    ],
+    "is_correct": true,
+    "prompt": "<start_of_turn>user\nLipika places the book on the counter. Diya moves the book to the floor. Kaviya puts the book on the shelf. Nithin moves the book to the desk. Arshika places the pen on the floor. Lipika is wearing a black shirt. Where is the book?<end_of_turn>\n<start_of_turn>model\nThe book is on the"
+  },
+  {
+    "id": 60,
+    "type": "distractor",
+    "num_transfers": 1,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "basket",
+    "predicted": "shelf",
+    "top5_tokens": [
+      "**",
+      "shelf",
+      "basket",
+      "",
+      "*"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nDiya moves the notebook to the shelf. Lipika puts the notebook on the basket. Yamha's favorite spot is the shelf. Nithin's favorite spot is the shelf. Puneet's favorite spot is the shelf. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  },
+  {
+    "id": 61,
+    "type": "distractor",
+    "num_transfers": 4,
+    "num_location_distractors": 3,
+    "num_random_distractors": 0,
+    "object": "pen",
+    "correct_answer": "counter",
+    "predicted": "table",
+    "top5_tokens": [
+      "**",
+      "table",
+      "floor",
+      "",
+      "*"
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nShreya places the pen on the floor. Puneet puts the pen on the table. Yamha puts the pen on the basket. Kaviya places the pen on the desk. Nithin puts the pen on the counter. Arshika's favorite spot is the table. Ali's favorite spot is the floor. Arshika's favorite spot is the floor. Where is the pen?<end_of_turn>\n<start_of_turn>model\nThe pen is on the"
+  },
+  {
+    "id": 62,
+    "type": "distractor",
+    "num_transfers": 2,
+    "num_location_distractors": 2,
+    "num_random_distractors": 0,
+    "object": "notebook",
+    "correct_answer": "basket",
+    "predicted": "floor",
+    "top5_tokens": [
+      "**",
+      "floor",
+      "shelf",
+      "basket",
+      ""
+    ],
+    "is_correct": false,
+    "prompt": "<start_of_turn>user\nLipika puts the notebook on the floor. Shrimayi moves the notebook to the shelf. Nithin puts the notebook on the basket. Lipika's favorite spot is the floor. Ali's favorite spot is the floor. Where is the notebook?<end_of_turn>\n<start_of_turn>model\nThe notebook is on the"
+  }
+]

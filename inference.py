@@ -3,14 +3,27 @@ import torch
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-MODEL_SIZE = "160m"  # using 160m , 1.4b, 6.9b
+# MODEL_SIZE = "2b-it"
 
-MODEL_NAME = f"EleutherAI/pythia-{MODEL_SIZE}"
-RESULTS_FILE = f"results_{MODEL_SIZE}.json"
-ACTIVATIONS_FILE = f"activations_{MODEL_SIZE}.pt"
+# MODEL_NAME = "google/gemma-2-2b-it"
+# RESULTS_FILE = "results_gemma2b.json"
+# ACTIVATIONS_FILE = "activations_gemma2b.pt"
+
+MODEL_SIZE = "7b-it"
+
+MODEL_NAME = "google/gemma-7b-it"
+RESULTS_FILE = "results_gemma7b.json"
+ACTIVATIONS_FILE = "activations_gemma7b.pt"
+
+# MODEL_SIZE = "160m"
+
+# MODEL_NAME = f"EleutherAI/pythia-{MODEL_SIZE}"
+# RESULTS_FILE = f"results_pythia{MODEL_SIZE}.json"
+# ACTIVATIONS_FILE = f"activations_pythia{MODEL_SIZE}.pt"
+
 DATASET_FILE = "dataset.json"
 
-VALID_LOCATIONS = ["table", "shelf", "drawer", "backpack", "desk", "counter"]
+VALID_LOCATIONS = ["shelf", "table", "chair", "floor", "desk", "counter"]
 TOP_K = 5  # check top 5 tokens for a valid location
 
 print(f"Loading model: {MODEL_NAME}")
@@ -18,9 +31,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, output_hidden_states=True)
+model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, output_hidden_states=True,torch_dtype=torch.float16,device_map="cuda")
 model.eval()
-model.to(device)
+# model.to(device)
 
 print(f"Model loaded. Layers: {model.config.num_hidden_layers}")
 
@@ -36,8 +49,9 @@ for item in dataset:
     correct_answer = item["answer"]
 
     # build prompt
-    prompt = item["story"].replace("Where is the " + obj + "?", "").strip()
-    prompt += f" The {obj} is on the"
+    prompt = f"<start_of_turn>user\n{item['story']}<end_of_turn>\n<start_of_turn>model\nThe {obj} is on the"
+    # prompt = item["story"].replace("Where is the " + obj + "?", "").strip()
+    # prompt += f" The {obj} is on the"
 
     inputs = tokenizer(prompt, return_tensors="pt").to(device)
 
