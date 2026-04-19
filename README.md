@@ -6,11 +6,9 @@
 
 ## What I Investigated and Why
 
-Can language models actually track how the world changes across a narrative, or do they just latch onto the most recently mentioned location? This project investigates object state tracking — following an object's location as it gets moved repeatedly through a story — and asks whether failure is a *storage* problem (the model never encoded the right answer) or a *readout* problem (the answer is internally represented but doesn't surface in the output).
+Language models are frequently deployed in settings that require tracking how the world changes across a narrative -- news summarization, social media analysis, interactive storytelling. A core capability this demands is object state tracking: following an entity's state as it gets updated repeatedly through a sequence of events.
 
-This distinction matters for alignment: a model that knows the right answer but can't say it is a fundamentally different failure mode than one that never processed the information at all.
-
-Additionally, state tracking is fundamental to how AI systems process evolving narratives in news, social media, and interactive storytelling. Understanding where these models fail has direct implications for AI-assisted content analysis
+This project investigates whether instruction-tuned language models genuinely perform this tracking, and more specifically whether failure is a *storage* problem (the model never encoded the right answer) or a *readout* problem (the answer is internally represented but doesn't surface in the output). These are fundamentally different failure modes with different implications for alignment and interpretability.
 
 ## Dataset
 
@@ -39,7 +37,13 @@ For each story, I extracted residual stream activations at the final token posit
 
 ## Key Findings
 
-### 1. Both models fail at 3+ transfers
+### 1. Behavioral Breakdown by Story Type
+
+![Behavioral results](behavioral_results.png)
+
+Distractor and red herring stories are both significantly harder than controls, confirming that location re-mention and entity confusion are meaningful failure modes. Gemma 7B shows greater improvement over 2B on red herring stories than distractor stories. Entity-specific tracking (knowing *which* object moved) appears to be a capability that scales better than resistance to location distractors alone.
+
+### 2. Both models fail at 3+ transfers
 
 | Transfers | Gemma 2B | Gemma 7B |
 |---|---|---|
@@ -51,7 +55,7 @@ For each story, I extracted residual stream activations at the final token posit
 
 Scaling from 2B to 7B helps at 2–3 transfers but both models collapse at high transfer counts. This suggests state overwriting is a fundamental failure mode not resolved by scale alone.
 
-### 2. The model knows more than it says
+### 3. The model knows more than it says
 
 Probing reveals a clear dissociation between internal representation and output behavior:
 
@@ -64,14 +68,14 @@ Probing reveals a clear dissociation between internal representation and output 
 
 In Gemma 2B, a linear probe trained on layer 20 activations achieves 55.4% accuracy, significantly above both random chance and the model's own output accuracy. On stories the model got *wrong*, the probe still achieves 46.4%, nearly 3 times random chance. **Information towards the correct location is encoded internally but fails to surface in the output.**
 
-### 3. State tracking crystallizes at different layers across scales
+### 4. State tracking crystallizes at different layers across scales
 
 ![Gemma 2B probe accuracy](probe_accuracy_gemma2b.png)
 ![Gemma 7B probe accuracy](probe_accuracy_gemma7b.png)
 
 In Gemma 2B, probe accuracy climbs gradually from layer 7 and peaks at layer 20. In Gemma 7B, accuracy stays near random chance until layer 17, then jumps sharply, suggesting the larger model defers state tracking to later, deeper processing. Notably, Gemma 7B's right plot shows above-chance probe accuracy even at layer 0 on incorrect stories, suggesting early encoding of location information that doesn't reliably propagate.
 
-### 4. The failure is a readout problem, not a storage problem
+### 5. The failure is a readout problem, not a storage problem
 
 The gap between probe accuracy and output accuracy is larger in 2B (14 percentage points) than 7B (near zero). This means 7B is better at surfacing what it knows, the readout mechanism improves with scale even when behavioral accuracy doesn't dramatically improve.
 
