@@ -72,13 +72,14 @@ def generate_distractor(num_transfers, num_distractors=2):
 
     # insert distractors that mention an old location
     for _ in range(num_distractors):
-        old_loc = (
-            random.choice(old_locations[:-1])
-            if len(old_locations) > 1
-            else old_locations[0]
-        )
-        trap_name = random.choice(NAMES)
-        sentences.append(f"{trap_name}'s favorite spot is the {old_loc}.")
+        if old_locations:
+            old_loc = (
+                random.choice(old_locations[:-1])
+                if len(old_locations) > 1
+                else old_locations[0]
+            )
+            trap_name = random.choice(NAMES)
+            sentences.append(f"{trap_name}'s favorite spot is the {old_loc}.")
 
     random.shuffle(
         sentences[num_transfers + 1 :]
@@ -154,7 +155,7 @@ def generate_red_herring(num_transfers, num_distractors=1):
 # option 3: manually written reversal stories
 REVERSAL_STORIES = [
     {
-        "type": "option3",
+        "type": "reversal",
         "num_transfers": 2,
         "num_location_distractors": 0,
         "num_random_distractors": 0,
@@ -163,7 +164,7 @@ REVERSAL_STORIES = [
         "answer": "table",
     },
     {
-        "type": "option3",
+        "type": "reversal",
         "num_transfers": 2,
         "num_location_distractors": 0,
         "num_random_distractors": 0,
@@ -172,13 +173,124 @@ REVERSAL_STORIES = [
         "answer": "counter",
     },
     {
-        "type": "option3",
+        "type": "reversal",
         "num_transfers": 3,
         "num_location_distractors": 0,
         "num_random_distractors": 0,
         "story": "Arshika puts the pen on the desk. Yamha moves the pen to the backpack. Manasvini moves the pen to the shelf. Shrimayi moves the pen back. Where is the pen?",
         "object": "pen",
         "answer": "backpack",
+    },
+    {
+        "type": "reversal",
+        "num_transfers": 2,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Nithin puts the key on the counter. Soha moves the key to the backpack. Lipika moves the key back. Where is the key?",
+        "object": "key",
+        "answer": "counter",
+    },
+    {
+        "type": "reversal",
+        "num_transfers": 2,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Shrujal places the notebook on the desk. Yamha moves the notebook to the drawer. Ali moves the notebook back. Where is the notebook?",
+        "object": "notebook",
+        "answer": "desk",
+    },
+    {
+        "type": "reversal",
+        "num_transfers": 2,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Arshika puts the mug on the shelf. Manasvini moves the mug to the counter. Diya moves the mug back. Where is the mug?",
+        "object": "mug",
+        "answer": "shelf",
+    },
+    {
+        "type": "reversal",
+        "num_transfers": 3,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Soha places the book on the counter. Nithin moves the book to the desk. Kaviya moves the book to the shelf. Shreya moves the book back. Where is the book?",
+        "object": "book",
+        "answer": "desk",
+    },
+    {
+        "type": "reversal",
+        "num_transfers": 3,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Ali puts the mug on the backpack. Shrujal moves the mug to the counter. Shrimayi moves the mug to the table. Lipika moves the mug back. Where is the mug?",
+        "object": "mug",
+        "answer": "counter",
+    },
+    {
+        "type": "reversal",
+        "num_transfers": 3,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Yamha places the pen on the shelf. Arshika moves the pen to the backpack. Soha moves the pen to the drawer. Nithin moves the pen back. Where is the pen?",
+        "object": "pen",
+        "answer": "backpack",
+    },
+    {
+        "type": "reversal",
+        "num_transfers": 2,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Shrimayi puts the key on the table. Kaviya moves the key to the shelf. Manasvini moves the key back. Where is the key?",
+        "object": "key",
+        "answer": "table",
+    },
+]
+
+CONTROL_STORIES = [
+    {
+        "type": "control",
+        "num_transfers": 0,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Diya puts the book on the table. Where is the book?",
+        "object": "book",
+        "answer": "table",
+    },
+    {
+        "type": "control",
+        "num_transfers": 0,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Ali places the mug on the shelf. Where is the mug?",
+        "object": "mug",
+        "answer": "shelf",
+    },
+    {
+        "type": "control",
+        "num_transfers": 0,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Nithin puts the keys on the counter. Where is the keys?",
+        "object": "keys",
+        "answer": "counter",
+    },
+    {
+        "type": "control",
+        "num_transfers": 0,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Kaviya moves the pen to the drawer. Where is the pen?",
+        "object": "pen",
+        "answer": "drawer",
+    },
+    {
+        "type": "control",
+        "num_transfers": 0,
+        "num_location_distractors": 0,
+        "num_random_distractors": 0,
+        "story": "Shreya places the notebook on the desk. Where is the notebook?",
+        "object": "notebook",
+        "answer": "desk",
     },
 ]
 
@@ -187,7 +299,7 @@ def generate_dataset():
     dataset = []
 
     # distractor stories: ~25 stories, spread across 1-4 transfers
-    for num_transfers in [1, 2, 3, 4]:
+    for num_transfers in [0, 1, 2, 3, 4]:
         for _ in range(6):
             dataset.append(
                 generate_distractor(num_transfers, num_distractors=random.randint(1, 3))
@@ -195,7 +307,7 @@ def generate_dataset():
     dataset.append(generate_distractor(2, num_distractors=2))  # one extra to hit ~25
 
     # red herring: ~22 stories, spread across 1-4 transfers
-    for num_transfers in [1, 2, 3, 4]:
+    for num_transfers in [0, 1, 2, 3, 4]:
         for _ in range(5):
             dataset.append(
                 generate_red_herring(
@@ -206,6 +318,7 @@ def generate_dataset():
     dataset.append(generate_red_herring(1, num_distractors=0))
 
     dataset.extend(REVERSAL_STORIES)
+    dataset.extend(CONTROL_STORIES)
 
     random.shuffle(dataset)
 
@@ -225,8 +338,3 @@ if __name__ == "__main__":
     print(f"Option 1: {sum(1 for d in dataset if d['type'] == 'distractor')}")
     print(f"Option 2: {sum(1 for d in dataset if d['type'] == 'red_herring')}")
     print(f"Option 3: {sum(1 for d in dataset if d['type'] == 'reversal')}")
-    print("\nSample story:")
-    sample = random.choice(dataset)
-    print(f"Type: {sample['type']}, Transfers: {sample['num_transfers']}")
-    print(f"Story: {sample['story']}")
-    print(f"Answer: {sample['answer']}")
