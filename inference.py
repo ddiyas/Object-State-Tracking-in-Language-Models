@@ -109,7 +109,7 @@ print(f"Correct: {correct} ({100*correct/total:.1f}%)")
 print(f"No valid location in top5: {no_prediction} ({100*no_prediction/total:.1f}%)")
 
 # breakdown by type
-for t in ["distractor", "red_herring", "reversal"]:
+for t in ["distractor", "red_herring", "reversal", "control"]:
     subset = [r for r in results if r["type"] == t]
     if subset:
         acc = sum(1 for r in subset if r["is_correct"]) / len(subset)
