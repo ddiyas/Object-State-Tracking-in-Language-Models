@@ -1,0 +1,51 @@
+
+Ubuntu 24.04.4 LTS6.8.0-106-generic
+----------------------------------------------------------------------------
+Machine Name:  	rlab7.cs          IP No:     2620:0:d60:ac0d::3e 128.6.13.62
+Tue Apr 28 09:25:12 PM EDT 2026	  Uptime:        	       41 days 10:18
+----------------------------------------------------------------------------
+Processes:     	3921              Local/SSH/X2Go/XRDP/VSCODE:	0/0/0/0/0           
+HostProxy:     	0                 TMUX/SCREEN/JUPYTER:	3/16/0
+Connections:   	91                Load/Total Users:	5/19
+Free Memory:   	108Gi of 499Gi    Free Swap:     	511Gi of 511Gi
+----------------------------------------------------------------------------
+CPU Info:      	AMD EPYC 7702 64-Core Processor - 256 cores 
+System CPU:    	32.14%            User CPU:      	40.39%
+CPU Idle:      	27.42%            IO Wait:       	0.05%
+----------------------------------------------------------------------------
+Login as:      	dks134            No. of Sessions:	0
+Avail.UserDisk:	                  Avail.Freespace:	101.35 GB
+----------------------------------------------------------------------------
+
+Model: qwen3b | Job: 132487 | Node: rlab7 | Start: Tue Apr 28 09:25:12 PM EDT 2026
+Loading results and activations for qwen3b
+Number of layers: 36
+Total results: 1020
+Usable: 1020
+Skipped: no_pred=0, no_activation=0, bad_label=0
+Correct: 594 | Incorrect: 426
+
+Label histogram (ALL usable): {'shelf': 179, 'table': 160, 'bed': 169, 'floor': 181, 'desk': 173, 'counter': 158}
+Label histogram (INCORRECT only): {'shelf': 70, 'table': 63, 'bed': 74, 'floor': 73, 'desk': 81, 'counter': 65}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 58.2%
+
+Training probes per layer...
+  layer 0/36 done... (471.0s)
+  layer 5/36 done... (447.0s)
+  layer 10/36 done... (351.2s)
+  layer 15/36 done... (419.9s)
+  layer 20/36 done... (361.0s)
+  layer 25/36 done... (189.7s)
+  layer 30/36 done... (162.9s)
+  layer 35/36 done... (155.1s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): RepeatedStratifiedKFold(5x1)
+
+Best probe (ALL) balanced acc: 81.4% at layer 35
+Best probe (INC) balanced acc: 66.7% at layer 33
+
+Plot saved to probe_accuracy_qwen3b.png
+Done: Wed Apr 29 12:36:00 AM EDT 2026

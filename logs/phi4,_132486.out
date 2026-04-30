@@ -1,0 +1,31 @@
+Model: phi4 | Job: 132486 | Node: rlab7 | Start: Tue Apr 28 09:25:00 PM EDT 2026
+Loading results and activations for phi4
+Number of layers: 32
+Total results: 1020
+Usable: 1015
+Skipped: no_pred=5, no_activation=0, bad_label=0
+Correct: 889 | Incorrect: 126
+
+Label histogram (ALL usable): {'shelf': 179, 'table': 159, 'bed': 168, 'floor': 180, 'desk': 171, 'counter': 158}
+Label histogram (INCORRECT only): {'shelf': 12, 'table': 16, 'bed': 25, 'floor': 21, 'desk': 32, 'counter': 20}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 87.6%
+
+Training probes per layer...
+  layer 0/32 done... (673.1s)
+  layer 5/32 done... (310.9s)
+  layer 10/32 done... (752.0s)
+  layer 15/32 done... (533.3s)
+  layer 20/32 done... (9.5s)
+  layer 25/32 done... (8.7s)
+  layer 30/32 done... (5.8s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): RepeatedStratifiedKFold(5x1)
+
+Best probe (ALL) balanced acc: 92.5% at layer 26
+Best probe (INC) balanced acc: 60.0% at layer 26
+
+Plot saved to probe_accuracy_phi4.png
+Done: Wed Apr 29 12:37:58 AM EDT 2026

@@ -1,0 +1,49 @@
+
+Ubuntu 24.04.4 LTS6.8.0-106-generic
+----------------------------------------------------------------------------
+Machine Name:  	rlab6.cs          IP No:     2620:0:d60:ac0d::1a 128.6.13.26
+Wed Apr 29 01:44:06 AM EDT 2026	  Uptime:        	       36 days 14:08
+----------------------------------------------------------------------------
+Processes:     	683               Local/SSH/X2Go/XRDP/VSCODE:	0/0/0/0/0           
+HostProxy:     	0                 TMUX/SCREEN/JUPYTER:	0/2/0
+Connections:   	8                 Load/Total Users:	5/2
+Free Memory:   	85Gi of 247Gi     Free Swap:     	511Gi of 511Gi
+----------------------------------------------------------------------------
+CPU Info:      	AMD EPYC 7413 24-Core Processor - 48 cores 
+System CPU:    	1.23%             User CPU:      	7.32%
+CPU Idle:      	91.46%            IO Wait:       	0.00%
+----------------------------------------------------------------------------
+Login as:      	dks134            No. of Sessions:	0
+Avail.UserDisk:	                  Avail.Freespace:	0
+----------------------------------------------------------------------------
+
+Model: qwen7b | Job: 132616 | Node: rlab6 | Start: Wed Apr 29 01:44:06 AM EDT 2026
+Loading results and activations for qwen7b
+Number of layers: 28
+Total results: 1020
+Usable: 1011
+Skipped: no_pred=9, no_activation=0, bad_label=0
+Correct: 821 | Incorrect: 190
+
+Label histogram (ALL usable): {'shelf': 176, 'table': 160, 'bed': 167, 'floor': 180, 'desk': 171, 'counter': 157}
+Label histogram (INCORRECT only): {'shelf': 14, 'table': 37, 'bed': 46, 'floor': 18, 'desk': 41, 'counter': 34}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 81.2%
+
+Training probes per layer...
+  layer 0/28 done... (597.4s)
+  layer 5/28 done... (400.6s)
+  layer 10/28 done... (299.5s)
+  layer 15/28 done... (149.2s)
+  layer 20/28 done... (154.3s)
+  layer 25/28 done... (181.1s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): RepeatedStratifiedKFold(5x1)
+
+Best probe (ALL) balanced acc: 90.1% at layer 22
+Best probe (INC) balanced acc: 67.9% at layer 9
+
+Plot saved to probe_accuracy_qwen7b.png
+Done: Wed Apr 29 03:47:37 AM EDT 2026

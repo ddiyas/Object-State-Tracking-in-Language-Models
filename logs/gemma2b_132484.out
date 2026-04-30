@@ -1,0 +1,49 @@
+
+Ubuntu 24.04.4 LTS6.8.0-106-generic
+----------------------------------------------------------------------------
+Machine Name:  	ilab1.cs          IP No:       2620:0:d60:ac0d::2 128.6.13.2
+Tue Apr 28 09:25:06 PM EDT 2026	  Uptime:        	       40 days 22:29
+----------------------------------------------------------------------------
+Processes:     	2811              Local/SSH/X2Go/XRDP/VSCODE:	0/17/0/5/0          
+HostProxy:     	10                TMUX/SCREEN/JUPYTER:	12/0/0
+Connections:   	199               Load/Total Users:	27/44
+Free Memory:   	51Gi of 1.0Ti     Free Swap:     	511Gi of 511Gi
+----------------------------------------------------------------------------
+CPU Info:      	AMD EPYC 7313 16-Core Processor - 64 cores 
+System CPU:    	8.54%             User CPU:      	34.17%
+CPU Idle:      	56.81%            IO Wait:       	0.48%
+----------------------------------------------------------------------------
+Login as:      	dks134            No. of Sessions:	0
+Avail.UserDisk:	                  Avail.Freespace:	102.13 GB
+----------------------------------------------------------------------------
+
+Model: gemma2b | Job: 132484 | Node: ilab1 | Start: Tue Apr 28 09:25:06 PM EDT 2026
+Loading results and activations for gemma2b
+Number of layers: 26
+Total results: 1020
+Usable: 1019
+Skipped: no_pred=1, no_activation=0, bad_label=0
+Correct: 681 | Incorrect: 338
+
+Label histogram (ALL usable): {'shelf': 179, 'table': 160, 'bed': 168, 'floor': 181, 'desk': 173, 'counter': 158}
+Label histogram (INCORRECT only): {'shelf': 61, 'table': 51, 'bed': 61, 'floor': 71, 'desk': 49, 'counter': 45}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 66.8%
+
+Training probes per layer...
+  layer 0/26 done... (1645.4s)
+  layer 5/26 done... (921.2s)
+  layer 10/26 done... (857.8s)
+  layer 15/26 done... (682.4s)
+  layer 20/26 done... (600.8s)
+  layer 25/26 done... (541.1s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): RepeatedStratifiedKFold(5x1)
+
+Best probe (ALL) balanced acc: 84.7% at layer 21
+Best probe (INC) balanced acc: 67.2% at layer 21
+
+Plot saved to probe_accuracy_gemma2b.png
+Done: Wed Apr 29 03:26:35 AM EDT 2026

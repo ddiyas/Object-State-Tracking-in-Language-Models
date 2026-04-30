@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# chonky files
+*.pt
+activations/
+
 # Distribution / packaging
 .Python
 build/

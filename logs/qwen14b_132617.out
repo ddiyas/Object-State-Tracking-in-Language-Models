@@ -1,0 +1,53 @@
+
+Ubuntu 24.04.4 LTS6.8.0-106-generic
+----------------------------------------------------------------------------
+Machine Name:  	rlab3.cs          IP No:       2620:0:d60:ac0d::9 128.6.13.9
+Wed Apr 29 01:44:11 AM EDT 2026	  Uptime:        	       43 days 07:57
+----------------------------------------------------------------------------
+Processes:     	1693              Local/SSH/X2Go/XRDP/VSCODE:	0/0/0/0/0           
+HostProxy:     	0                 TMUX/SCREEN/JUPYTER:	1/0/0
+Connections:   	37                Load/Total Users:	10/1
+Free Memory:   	387Gi of 1.0Ti    Free Swap:     	520Gi of 520Gi
+----------------------------------------------------------------------------
+CPU Info:      	AMD EPYC 7352 24-Core Processor - 96 cores 
+System CPU:    	0.39%             User CPU:      	10.99%
+CPU Idle:      	88.58%            IO Wait:       	0.04%
+----------------------------------------------------------------------------
+Login as:      	dks134            No. of Sessions:	0
+Avail.UserDisk:	                  Avail.Freespace:	258.16 GB
+----------------------------------------------------------------------------
+
+Model: qwen14b | Job: 132617 | Node: rlab3 | Start: Wed Apr 29 01:44:11 AM EDT 2026
+Loading results and activations for qwen14b
+Number of layers: 48
+Total results: 1020
+Usable: 1020
+Skipped: no_pred=0, no_activation=0, bad_label=0
+Correct: 912 | Incorrect: 108
+
+Label histogram (ALL usable): {'shelf': 179, 'table': 160, 'bed': 169, 'floor': 181, 'desk': 173, 'counter': 158}
+Label histogram (INCORRECT only): {'shelf': 2, 'table': 14, 'bed': 26, 'floor': 29, 'desk': 21, 'counter': 16}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 89.4%
+
+Training probes per layer...
+  layer 0/48 done... (1642.0s)
+  layer 5/48 done... (1450.3s)
+  layer 10/48 done... (1475.0s)
+  layer 15/48 done... (1485.6s)
+  layer 20/48 done... (1722.5s)
+  layer 25/48 done... (1143.4s)
+  layer 30/48 done... (659.1s)
+  layer 35/48 done... (538.1s)
+  layer 40/48 done... (590.0s)
+  layer 45/48 done... (608.9s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): StratifiedShuffleSplit(n=20, test=0.2)
+
+Best probe (ALL) balanced acc: 92.8% at layer 46
+Best probe (INC) balanced acc: 53.1% at layer 46
+
+Plot saved to probe_accuracy_qwen14b.png
+Done: Wed Apr 29 04:21:31 PM EDT 2026

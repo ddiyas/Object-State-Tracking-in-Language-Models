@@ -1,9 +1,5 @@
 # Object-State-Tracking-in-Language-Models
 
-**HackPrinceton Spring 2026**
-* Entertainment & Media Hack
-* $$D_{model}$$ Alignment & Mechanistic Interpretability Track
-
 ## What I Investigated and Why
 
 Can language models actually track how the world changes across a narrative, or do they just latch onto the most recently mentioned location? This project investigates object state tracking — following an object's location as it gets moved repeatedly through a story — and asks whether failure is a *storage* problem (the model never encoded the right answer) or a *readout* problem (the answer is internally represented but doesn't surface in the output).

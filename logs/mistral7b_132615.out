@@ -1,0 +1,31 @@
+Model: mistral7b | Job: 132615 | Node: ilab4 | Start: Wed Apr 29 01:44:06 AM EDT 2026
+Loading results and activations for mistral7b
+Number of layers: 32
+Total results: 1020
+Usable: 1020
+Skipped: no_pred=0, no_activation=0, bad_label=0
+Correct: 722 | Incorrect: 298
+
+Label histogram (ALL usable): {'shelf': 179, 'table': 160, 'bed': 169, 'floor': 181, 'desk': 173, 'counter': 158}
+Label histogram (INCORRECT only): {'shelf': 27, 'table': 39, 'bed': 80, 'floor': 57, 'desk': 53, 'counter': 42}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 70.8%
+
+Training probes per layer...
+  layer 0/32 done... (4970.4s)
+  layer 5/32 done... (4053.5s)
+  layer 10/32 done... (1581.1s)
+  layer 15/32 done... (1101.3s)
+  layer 20/32 done... (860.7s)
+  layer 25/32 done... (1062.6s)
+  layer 30/32 done... (688.3s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): RepeatedStratifiedKFold(5x1)
+
+Best probe (ALL) balanced acc: 88.1% at layer 10
+Best probe (INC) balanced acc: 69.2% at layer 22
+
+Plot saved to probe_accuracy_mistral7b.png
+Done: Wed Apr 29 06:37:46 PM EDT 2026

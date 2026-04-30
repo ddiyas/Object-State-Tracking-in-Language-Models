@@ -1,0 +1,49 @@
+
+Ubuntu 24.04.4 LTS6.8.0-106-generic
+----------------------------------------------------------------------------
+Machine Name:  	rlab6.cs          IP No:     2620:0:d60:ac0d::1a 128.6.13.26
+Tue Apr 28 09:25:04 PM EDT 2026	  Uptime:        	       36 days 09:49
+----------------------------------------------------------------------------
+Processes:     	693               Local/SSH/X2Go/XRDP/VSCODE:	0/0/0/0/0           
+HostProxy:     	0                 TMUX/SCREEN/JUPYTER:	0/2/0
+Connections:   	9                 Load/Total Users:	5/2
+Free Memory:   	87Gi of 247Gi     Free Swap:     	511Gi of 511Gi
+----------------------------------------------------------------------------
+CPU Info:      	AMD EPYC 7413 24-Core Processor - 48 cores 
+System CPU:    	2.53%             User CPU:      	7.12%
+CPU Idle:      	90.35%            IO Wait:       	0.00%
+----------------------------------------------------------------------------
+Login as:      	dks134            No. of Sessions:	0
+Avail.UserDisk:	                  Avail.Freespace:	0
+----------------------------------------------------------------------------
+
+Model: llama3b | Job: 132485 | Node: rlab6 | Start: Tue Apr 28 09:25:04 PM EDT 2026
+Loading results and activations for llama3b
+Number of layers: 28
+Total results: 1020
+Usable: 1020
+Skipped: no_pred=0, no_activation=0, bad_label=0
+Correct: 581 | Incorrect: 439
+
+Label histogram (ALL usable): {'shelf': 179, 'table': 160, 'bed': 169, 'floor': 181, 'desk': 173, 'counter': 158}
+Label histogram (INCORRECT only): {'shelf': 85, 'table': 72, 'bed': 78, 'floor': 85, 'desk': 79, 'counter': 40}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 57.0%
+
+Training probes per layer...
+  layer 0/28 done... (615.1s)
+  layer 5/28 done... (297.8s)
+  layer 10/28 done... (243.3s)
+  layer 15/28 done... (211.5s)
+  layer 20/28 done... (196.2s)
+  layer 25/28 done... (181.7s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): RepeatedStratifiedKFold(5x1)
+
+Best probe (ALL) balanced acc: 85.5% at layer 27
+Best probe (INC) balanced acc: 74.6% at layer 24
+
+Plot saved to probe_accuracy_llama3b.png
+Done: Tue Apr 28 11:25:02 PM EDT 2026

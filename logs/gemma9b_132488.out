@@ -1,0 +1,33 @@
+Model: gemma9b | Job: 132488 | Node: rlab7 | Start: Tue Apr 28 09:25:00 PM EDT 2026
+Loading results and activations for gemma9b
+Number of layers: 42
+Total results: 1020
+Usable: 1020
+Skipped: no_pred=0, no_activation=0, bad_label=0
+Correct: 772 | Incorrect: 248
+
+Label histogram (ALL usable): {'shelf': 179, 'table': 160, 'bed': 169, 'floor': 181, 'desk': 173, 'counter': 158}
+Label histogram (INCORRECT only): {'shelf': 24, 'table': 41, 'bed': 47, 'floor': 51, 'desk': 47, 'counter': 38}
+
+Random chance (balanced acc): 16.7%
+Model output accuracy (usable set): 75.7%
+
+Training probes per layer...
+  layer 0/42 done... (900.5s)
+  layer 5/42 done... (506.6s)
+  layer 10/42 done... (438.9s)
+  layer 15/42 done... (450.2s)
+  layer 20/42 done... (204.8s)
+  layer 25/42 done... (192.7s)
+  layer 30/42 done... (13.9s)
+  layer 35/42 done... (9.5s)
+  layer 40/42 done... (3.6s)
+
+CV used (ALL): RepeatedStratifiedKFold(5x1)
+CV used (INC): RepeatedStratifiedKFold(5x1)
+
+Best probe (ALL) balanced acc: 88.6% at layer 25
+Best probe (INC) balanced acc: 61.2% at layer 39
+
+Plot saved to probe_accuracy_gemma9b.png
+Done: Wed Apr 29 12:38:12 AM EDT 2026

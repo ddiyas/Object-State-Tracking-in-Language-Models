@@ -1,10 +1,11 @@
 import random
 import json
+import itertools
 
 random.seed(67)
 
 OBJECTS = ["book", "pen", "notebook", "mug", "key"]
-LOCATIONS = ["shelf", "table", "basket", "floor", "desk", "counter"]
+LOCATIONS = ["shelf", "table", "bed", "floor", "desk", "counter"]
 NAMES = [
     "Diya",
     "Ali",
@@ -46,19 +47,17 @@ def distractor_sentence(name):
     return random.choice(DISTRACTOR_SENTENCES).format(name=random.choice(NAMES))
 
 
-def generate_distractor(num_transfers, num_distractors=2):
+def generate_distractor(num_transfers, num_distractors):
     obj = random.choice(OBJECTS)
     names = random.sample(NAMES, min(num_transfers + 1, len(NAMES)))
     locations = random.sample(LOCATIONS, min(num_transfers + 1, len(LOCATIONS)))
-
-    sentences = []
-
-    # initial placement
-    sentences.append(move_sentence(names[0], obj, locations[0]))
+ 
+    # build move sentences first
+    move_sentences = []
+    move_sentences.append(move_sentence(names[0], obj, locations[0]))
     current_location = locations[0]
     old_locations = [locations[0]]
-
-    # transfers
+ 
     for i in range(1, num_transfers + 1):
         name = names[i] if i < len(names) else random.choice(NAMES)
         loc = (
@@ -66,11 +65,12 @@ def generate_distractor(num_transfers, num_distractors=2):
             if i < len(locations)
             else random.choice([l for l in LOCATIONS if l != current_location])
         )
-        sentences.append(move_sentence(name, obj, loc))
+        move_sentences.append(move_sentence(name, obj, loc))
         old_locations.append(current_location)
         current_location = loc
-
-    # insert distractors that mention an old location
+ 
+    # build distractor sentences referencing old locations
+    distractors = []
     for _ in range(num_distractors):
         if old_locations:
             old_loc = (
@@ -79,16 +79,22 @@ def generate_distractor(num_transfers, num_distractors=2):
                 else old_locations[0]
             )
             trap_name = random.choice(NAMES)
-            sentences.append(f"{trap_name}'s favorite spot is the {old_loc}.")
-
-    sentences.append(f"Where is the {obj}?")
-
+            distractors.append(f"{trap_name}'s favorite spot is the {old_loc}.")
+ 
+    # interleave distractors randomly into move sequence
+    all_sentences = move_sentences.copy()
+    for d in distractors:
+        pos = random.randint(0, len(all_sentences))
+        all_sentences.insert(pos, d)
+ 
+    all_sentences.append(f"Where is the {obj}?")
+ 
     return {
         "type": "distractor",
         "num_transfers": num_transfers,
         "num_location_distractors": num_distractors,
         "num_random_distractors": 0,
-        "story": " ".join(sentences),
+        "story": " ".join(all_sentences),
         "object": obj,
         "answer": current_location,
     }
@@ -97,18 +103,16 @@ def generate_distractor(num_transfers, num_distractors=2):
 def generate_red_herring(num_transfers, num_distractors=1):
     obj = random.choice(OBJECTS)
     other_obj = random.choice([o for o in OBJECTS if o != obj])
-
+ 
     names = random.sample(NAMES, min(num_transfers + 2, len(NAMES)))
     locations = random.sample(LOCATIONS, min(num_transfers + 2, len(LOCATIONS)))
-
-    sentences = []
-
-    # initial placement
-    sentences.append(move_sentence(names[0], obj, locations[0]))
+ 
+    # build move sentences for target object
+    move_sentences = []
+    move_sentences.append(move_sentence(names[0], obj, locations[0]))
     current_location = locations[0]
     old_locations = [locations[0]]
-
-    # transfers of target object
+ 
     for i in range(1, num_transfers + 1):
         name = names[i] if i < len(names) else random.choice(NAMES)
         loc = (
@@ -116,10 +120,10 @@ def generate_red_herring(num_transfers, num_distractors=1):
             if i < len(locations)
             else random.choice([l for l in LOCATIONS if l != current_location])
         )
-        sentences.append(move_sentence(name, obj, loc))
+        move_sentences.append(move_sentence(name, obj, loc))
         old_locations.append(current_location)
         current_location = loc
-
+ 
     # red herring: move a different object to an old location
     red_herring_name = (
         names[-1] if len(names) > num_transfers + 1 else random.choice(NAMES)
@@ -129,94 +133,61 @@ def generate_red_herring(num_transfers, num_distractors=1):
         if len(old_locations) > 1
         else old_locations[0]
     )
-    sentences.append(move_sentence(red_herring_name, other_obj, red_herring_loc))
-
-    # optional extra distractors
-    for _ in range(num_distractors):
-        sentences.append(distractor_sentence(random.choice(NAMES)))
-
-    sentences.append(f"Where is the {obj}?")
-
+    red_herring = move_sentence(red_herring_name, other_obj, red_herring_loc)
+ 
+    # random filler distractors
+    fillers = [distractor_sentence(random.choice(NAMES)) for _ in range(num_distractors)]
+ 
+    # interleave red herring and fillers randomly into move sequence
+    all_sentences = move_sentences.copy()
+    for d in [red_herring] + fillers:
+        pos = random.randint(0, len(all_sentences))
+        all_sentences.insert(pos, d)
+ 
+    all_sentences.append(f"Where is the {obj}?")
+ 
     return {
         "type": "red_herring",
         "num_transfers": num_transfers,
-        "num_location_distractors": 1,  # always 1 red herring object move
+        "num_location_distractors": 1,
         "num_random_distractors": num_distractors,
-        "story": " ".join(sentences),
+        "story": " ".join(all_sentences),
         "object": obj,
         "answer": current_location,
     }
 
-CONTROL_STORIES = [
-    {
+CONTROL_STORIES = []
+for obj, loc in itertools.product(OBJECTS, LOCATIONS):
+    name = random.choice(NAMES)
+    CONTROL_STORIES.append({
         "type": "control",
         "num_transfers": 0,
         "num_location_distractors": 0,
         "num_random_distractors": 0,
-        "story": "Diya puts the book on the shelf. Where is the book?",
-        "object": "book",
-        "answer": "shelf",
-    },
-    {
-        "type": "control",
-        "num_transfers": 0,
-        "num_location_distractors": 0,
-        "num_random_distractors": 0,
-        "story": "Ali places the mug on the table. Where is the mug?",
-        "object": "mug",
-        "answer": "table",
-    },
-    {
-        "type": "control",
-        "num_transfers": 0,
-        "num_location_distractors": 0,
-        "num_random_distractors": 0,
-        "story": "Nithin puts the key on the counter. Where is the key?",
-        "object": "key",
-        "answer": "counter",
-    },
-    {
-        "type": "control",
-        "num_transfers": 0,
-        "num_location_distractors": 0,
-        "num_random_distractors": 0,
-        "story": "Kaviya moves the pen to the table. Where is the pen?",
-        "object": "pen",
-        "answer": "table",
-    },
-    {
-        "type": "control",
-        "num_transfers": 0,
-        "num_location_distractors": 0,
-        "num_random_distractors": 0,
-        "story": "Shreya places the notebook on the desk. Where is the notebook?",
-        "object": "notebook",
-        "answer": "desk",
-    },
-]
+        "story": f"{name} puts the {obj} on the {loc}. Where is the {obj}?",
+        "object": obj,
+        "answer": loc,
+    })
 
 
 def generate_dataset():
     dataset = []
 
-    # distractor stories: ~25 stories, spread across 1-4 transfers
     for num_transfers in [0, 1, 2, 3, 4]:
-        for _ in range(6):
-            dataset.append(
-                generate_distractor(num_transfers, num_distractors=random.randint(1, 3))
-            )
-    dataset.append(generate_distractor(2, num_distractors=2))  # one extra to hit ~25
-
-    # red herring: ~22 stories, spread across 1-4 transfers
-    for num_transfers in [0, 1, 2, 3, 4]:
-        for _ in range(5):
-            dataset.append(
-                generate_red_herring(
-                    num_transfers, num_distractors=random.randint(0, 2)
+        for num_distractors in [0, 1, 2]:
+            for _ in range(33):
+                dataset.append(
+                    generate_distractor(num_transfers, num_distractors=num_distractors)
                 )
-            )
-    dataset.append(generate_red_herring(3, num_distractors=1))
-    dataset.append(generate_red_herring(1, num_distractors=0))
+
+    for num_transfers in [0, 1, 2, 3, 4]:
+        for num_distractors in [0, 1, 2]:
+            for _ in range(33):
+                dataset.append(
+                    generate_red_herring(
+                        num_transfers, num_distractors=num_distractors
+                    )
+                )
 
     random.shuffle(dataset)
 
