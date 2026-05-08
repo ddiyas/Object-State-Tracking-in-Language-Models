@@ -1,0 +1,13 @@
+{
+  "model": "qwen14b",
+  "model_accuracy": 0.8941176470588236,
+  "chance": 0.16666666666666666,
+  "best_all_layer": 46,
+  "best_all_bal": 0.9282905136617187,
+  "best_inc_layer": 46,
+  "best_inc_bal": 0.5311111111111111,
+  "num_layers": 48,
+  "n_usable": 1020,
+  "n_correct": 912,
+  "n_incorrect": 108
+}

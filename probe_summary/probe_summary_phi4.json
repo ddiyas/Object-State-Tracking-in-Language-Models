@@ -1,0 +1,13 @@
+{
+  "model": "phi4",
+  "model_accuracy": 0.8758620689655172,
+  "chance": 0.16666666666666666,
+  "best_all_layer": 26,
+  "best_all_bal": 0.924902185540231,
+  "best_inc_layer": 26,
+  "best_inc_bal": 0.5998412698412698,
+  "num_layers": 32,
+  "n_usable": 1015,
+  "n_correct": 889,
+  "n_incorrect": 126
+}

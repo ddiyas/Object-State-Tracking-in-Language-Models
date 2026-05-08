@@ -1,0 +1,13 @@
+{
+  "model": "gemma2b",
+  "model_accuracy": 0.6683022571148185,
+  "chance": 0.16666666666666666,
+  "best_all_layer": 21,
+  "best_all_bal": 0.847082124742229,
+  "best_inc_layer": 21,
+  "best_inc_bal": 0.6716211566211566,
+  "num_layers": 26,
+  "n_usable": 1019,
+  "n_correct": 681,
+  "n_incorrect": 338
+}

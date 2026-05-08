@@ -44,12 +44,12 @@ parser.add_argument(
     "--cv_folds", type=int, default=5, help="Number of CV folds when feasible."
 )
 parser.add_argument(
-    "--cv_repeats", type=int, default=10, help="Repeats for RepeatedStratifiedKFold."
+    "--cv_repeats", type=int, default=3, help="Repeats for RepeatedStratifiedKFold."
 )
 parser.add_argument(
     "--shuffle_splits",
     type=int,
-    default=20,
+    default=10,
     help="Splits for StratifiedShuffleSplit fallback.",
 )
 parser.add_argument(
@@ -323,119 +323,28 @@ if any(v is not None for v in inc_bal_mean):
         f"Best probe (INC) balanced acc: {best_inc_bal*100:.1f}% at layer {best_inc_layer}"
     )
 
-# ------------------------------------------------------------
-# Plot
-# ------------------------------------------------------------
-layers = np.arange(num_layers)
+np.save(f"probe_layers_all_{MODEL_SIZE}.npy", np.array(all_bal_mean, dtype=float))
+np.save(f"probe_layers_inc_{MODEL_SIZE}.npy", np.array([x if x is not None else np.nan for x in inc_bal_mean], dtype=float))
 
+summary = {
+    "model": MODEL_SIZE,
+    "model_accuracy": model_accuracy,
+    "chance": chance_bal_acc,
+    "best_all_layer": best_all_layer,
+    "best_all_bal": best_all_bal,
+    "best_inc_layer": (
+        best_inc_layer if any(v is not None for v in inc_bal_mean) else None
+    ),
+    "best_inc_bal": best_inc_bal if any(v is not None for v in inc_bal_mean) else None,
+    "num_layers": num_layers,
+    "n_usable": len(usable),
+    "n_correct": len(correct),
+    "n_incorrect": len(incorrect),
+}
 
-def to_np(lst):
-    return np.array([np.nan if v is None else v for v in lst], dtype=float)
+with open(f"probe_summary_{MODEL_SIZE}.json", "w") as f:
+    json.dump(summary, f, indent=2)
 
-
-all_bal_m = to_np(all_bal_mean) * 100
-all_bal_s = to_np(all_bal_std) * 100
-inc_bal_m = to_np(inc_bal_mean) * 100
-inc_bal_s = to_np(inc_bal_std) * 100
-all_perm_m = to_np(all_perm_bal_mean) * 100
-all_perm_s = to_np(all_perm_bal_std) * 100
-inc_perm_m = to_np(inc_perm_bal_mean) * 100
-inc_perm_s = to_np(inc_perm_bal_std) * 100
-
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
-fig.suptitle(f"Probe Balanced Accuracy by Layer — {MODEL_SIZE}", fontsize=14)
-
-ax1.plot(layers, all_bal_m, marker="o", color="steelblue", label="Probe (balanced acc)")
-ax1.fill_between(
-    layers,
-    all_bal_m - all_bal_s,
-    all_bal_m + all_bal_s,
-    color="steelblue",
-    alpha=0.2,
-    linewidth=0,
-)
-if args.permute_n > 0 and not np.all(np.isnan(all_perm_m)):
-    ax1.plot(
-        layers,
-        all_perm_m,
-        color="black",
-        linestyle="--",
-        linewidth=1.0,
-        label=f"Permuted labels (n={args.permute_n})",
-    )
-    ax1.fill_between(
-        layers,
-        all_perm_m - all_perm_s,
-        all_perm_m + all_perm_s,
-        color="black",
-        alpha=0.1,
-        linewidth=0,
-    )
-ax1.axhline(
-    y=model_accuracy * 100,
-    color="red",
-    linestyle="--",
-    label=f"Model output acc ({model_accuracy*100:.1f}%)",
-)
-ax1.axhline(
-    y=chance_bal_acc * 100,
-    color="gray",
-    linestyle=":",
-    label=f"Chance ({chance_bal_acc*100:.1f}%)",
-)
-ax1.set_xlabel("Layer")
-ax1.set_ylabel("Balanced Accuracy (%)")
-ax1.set_title("All Usable Stories")
-ax1.legend()
-ax1.grid(True, alpha=0.3)
-
-valid_mask = ~np.isnan(inc_bal_m)
-ax2.plot(
-    layers[valid_mask],
-    inc_bal_m[valid_mask],
-    marker="o",
-    color="darkorange",
-    label="Probe (balanced acc, incorrect only)",
-)
-ax2.fill_between(
-    layers[valid_mask],
-    (inc_bal_m - inc_bal_s)[valid_mask],
-    (inc_bal_m + inc_bal_s)[valid_mask],
-    color="darkorange",
-    alpha=0.2,
-    linewidth=0,
-)
-if args.permute_n > 0 and not np.all(np.isnan(inc_perm_m)):
-    ax2.plot(
-        layers[valid_mask],
-        inc_perm_m[valid_mask],
-        color="black",
-        linestyle="--",
-        linewidth=1.0,
-        label="Permuted labels",
-    )
-    ax2.fill_between(
-        layers[valid_mask],
-        (inc_perm_m - inc_perm_s)[valid_mask],
-        (inc_perm_m + inc_perm_s)[valid_mask],
-        color="black",
-        alpha=0.1,
-        linewidth=0,
-    )
-ax2.axhline(
-    y=chance_bal_acc * 100,
-    color="gray",
-    linestyle=":",
-    label=f"Chance ({chance_bal_acc*100:.1f}%)",
-)
-ax2.set_xlabel("Layer")
-ax2.set_ylabel("Balanced Accuracy (%)")
-ax2.set_title(
-    "Incorrect Predictions Only\n(Decodable true label despite wrong output?)"
-)
-ax2.legend()
-ax2.grid(True, alpha=0.3)
-
-plt.tight_layout()
-plt.savefig(OUTPUT_PLOT, dpi=150, bbox_inches="tight")
-print(f"\nPlot saved to {OUTPUT_PLOT}")
+print(f"Saved probe_layers_all_{MODEL_SIZE}.npy")
+print(f"Saved probe_layers_inc_{MODEL_SIZE}.npy")
+print(f"Saved probe_summary_{MODEL_SIZE}.json")

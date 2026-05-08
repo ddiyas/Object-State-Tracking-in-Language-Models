@@ -1,0 +1,13 @@
+{
+  "model": "llama8b",
+  "model_accuracy": 0.8009803921568628,
+  "chance": 0.16666666666666666,
+  "best_all_layer": 24,
+  "best_all_bal": 0.9056413748823615,
+  "best_inc_layer": 28,
+  "best_inc_bal": 0.701111111111111,
+  "num_layers": 32,
+  "n_usable": 1020,
+  "n_correct": 817,
+  "n_incorrect": 203
+}

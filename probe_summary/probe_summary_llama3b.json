@@ -1,0 +1,13 @@
+{
+  "model": "llama3b",
+  "model_accuracy": 0.5696078431372549,
+  "chance": 0.16666666666666666,
+  "best_all_layer": 27,
+  "best_all_bal": 0.8545218750010022,
+  "best_inc_layer": 24,
+  "best_inc_bal": 0.7459943977591037,
+  "num_layers": 28,
+  "n_usable": 1020,
+  "n_correct": 581,
+  "n_incorrect": 439
+}

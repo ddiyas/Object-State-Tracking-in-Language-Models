@@ -1,0 +1,13 @@
+{
+  "model": "mistral7b",
+  "model_accuracy": 0.707843137254902,
+  "chance": 0.16666666666666666,
+  "best_all_layer": 10,
+  "best_all_bal": 0.880736752394722,
+  "best_inc_layer": 22,
+  "best_inc_bal": 0.692005772005772,
+  "num_layers": 32,
+  "n_usable": 1020,
+  "n_correct": 722,
+  "n_incorrect": 298
+}
