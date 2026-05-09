@@ -1,3 +1,7 @@
+# Abstract
+
+Tracking how entity states evolve across a narrative is a fundamental requirement for understand complex language. Yet, whether instruction-tuned language models can genuinely perform this tracking, or rely on surface-level heuristics remains underexplored. We investigate object state tracking--following an object's location as it is repeatedly moved through a story--across nine instruction-tuned language models spanning four architecture families and parameter range of 2B to 14B. Using a controlled synthetic dataset of 1,020 templated stories with systematic variation in complexity through changes in transfer count and distractor type and count, we evaluate both behavioral accuracy and internal representation via linear probing of residual stream activations. We find that that accuracy for all models degrades monotonically with transfer count. Additionally, linear probes trained on residual stream activations significantly outperform model outputs on failure cases across all nine models $(p < 0.0001)$, suggesting that state tracking failures reflect a readout problem rather than a storage problem.
+
 # Introduction
 
 Language models are increasingly deployed in settings that require
