@@ -340,3 +340,22 @@ Extending this analysis to real-world text such as news articles or
 clinical narratives, and testing whether targeted fine-tuning can close
 the readout gap without affecting general performance, are also natural
 next steps.
+
+# Reproducibility
+
+To reproduce our results:
+
+1.  Generate the dataset: `python story_generation.py`
+
+2.  Run behavioral inference (set `MODEL_SIZE` as argument):
+    `python inference.py –model_size gemma2b`
+
+3.  Run probing: `python probing.py –model_size gemma2b`
+
+4.  Generate plots and statistical tests: `python probing_analysis.py`
+    and `python plots.py`
+
+All experiments were run on the Rutgers University iLab GPU cluster
+using NVIDIA RTX A4000 and A6000 GPUs. Model weights are available via
+HuggingFace; gated models (Gemma, Llama) require accepting the
+respective license agreements.
