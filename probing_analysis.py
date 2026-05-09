@@ -165,14 +165,16 @@ for ax, (family, members) in zip(axes.flat, FAMILIES.items()):
             markersize=3,
             linewidth=1.8,
             color=MODEL_COLORS[name],
-            label=name,
+            label=f"{name} probe",
         )
+
         ax.axhline(
             y=d["model_acc"] * 100,
             color=MODEL_COLORS[name],
             linestyle="--",
             linewidth=1,
-            alpha=0.5,
+            alpha=0.6,
+            label=f"{name} model acc",
         )
 
     ax.axhline(y=CHANCE * 100, color="gray", linestyle=":", linewidth=1, label="Chance")
